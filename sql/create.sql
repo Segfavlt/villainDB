@@ -51,12 +51,9 @@ create table if not exists mission(
     'Destruction') not null,
   target varchar(30) not null,
   boss Integer not null,
-  region ENUM('North America', 'South America', 'Africa',
-    'Europe', 'Asia') not null,
   Primary Key(name, target, boss),
   Index summary (name, target),
-  Foreign Key(boss) references boss(id),
-  Foreign Key(region) references region(name)
+  Foreign Key(boss) references boss(id)
 ) ENGINE=INNODB;
 
 create table if not exists mission_description(
