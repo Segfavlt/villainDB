@@ -17,10 +17,9 @@ create table if not exists region(
 ) ENGINE=INNODB;
 
 create table if not exists base(
-  id Integer not null,
+  id Integer Primary Key,
   region ENUM('North America', 'South America', 'Africa',
     'Europe', 'Asia') not null,
-  Primary Key(id, region),
   Foreign Key(region) references region(name)
 ) ENGINE=INNODB;
 
@@ -28,12 +27,9 @@ create table if not exists base(
 create table if not exists boss(
   id Integer auto_increment Primary Key,
   base Integer not null,
-  region ENUM('North America', 'South America', 'Africa',
-    'Europe', 'Asia') not null,
   effectiveness Integer not null,
   name varchar(20) not null,
-  Foreign Key(base) references base(id),
-  Foreign Key(region) references region(name)
+  Foreign Key(base) references base(id)
 ) ENGINE=INNODB;
 
 # threatening_threat renamed to threat
@@ -49,8 +45,8 @@ create table if not exists threat(
 create table if not exists mission(
   name ENUM('Assassination', 'Capture', 'Interception', 'Recon',
     'Destruction') not null,
-  target varchar(30) not null,
   boss Integer not null,
+  target varchar(30) not null,
   Primary Key(name, target, boss),
   Index summary (name, target),
   Foreign Key(boss) references boss(id)
@@ -83,10 +79,7 @@ create table if not exists allies(
 create table if not exists minion(
   id Integer auto_increment Primary Key,
   grade char(1) not null,
-  region ENUM('North America', 'South America', 'Africa',
-    'Europe', 'Asia') not null,
   base Integer not null,
-  Foreign Key(region) references region(name),
   Foreign Key(base) references base(id)
 ) ENGINE=INNODB;
 
