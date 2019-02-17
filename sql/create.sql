@@ -2,9 +2,11 @@
 # Database Creation #
 #####################
 
-create database project;
+drop database if exists villainDB;
 
-use project;
+create database villainDB;
+
+use villainDB;
 
 ##################
 # Table Creation #
