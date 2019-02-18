@@ -19,7 +19,7 @@ create table if not exists region(
 ) ENGINE=INNODB;
 
 create table if not exists base(
-  id Integer Primary Key,
+  id Integer Primary Key auto_increment,
   region ENUM('North America', 'South America', 'Africa',
     'Europe', 'Asia') not null,
   Foreign Key(region) references region(name)
@@ -79,7 +79,7 @@ create table if not exists allies(
 
 # assigned_minion renamed to minion
 create table if not exists minion(
-  id Integer auto_increment Primary Key,
+  id Integer Primary Key auto_increment,
   grade char(1) not null,
   base Integer not null,
   Foreign Key(base) references base(id)
@@ -105,3 +105,10 @@ create table if not exists tech(
   tool varchar(20),
   Foreign Key(id) references minion(id)
 ) ENGINE=INNODB;
+
+
+# alter to allow auto_increment
+alter table minion auto_increment=100000;
+alter table boss   auto_increment=100000;
+alter table threat auto_increment=1;
+alter table bass   auto_increment=1;
