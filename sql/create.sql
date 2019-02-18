@@ -23,7 +23,7 @@ create table if not exists base(
   region ENUM('North America', 'South America', 'Africa',
     'Europe', 'Asia') not null,
   Foreign Key(region) references region(name)
-) ENGINE=INNODB;
+) ENGINE=INNODB auto_increment=1;
 
 # managing_boss renamed to boss
 create table if not exists boss(
@@ -32,7 +32,7 @@ create table if not exists boss(
   effectiveness Integer not null,
   name varchar(20) not null,
   Foreign Key(base) references base(id)
-) ENGINE=INNODB;
+) ENGINE=INNODB auto_increment=1;
 
 # threatening_threat renamed to threat
 create table if not exists threat(
@@ -42,7 +42,7 @@ create table if not exists threat(
   region ENUM('North America', 'South America', 'Africa',
     'Europe', 'Asia') not null,
   Foreign Key(region) references region(name)
-) ENGINE=INNODB;
+) ENGINE=INNODB auto_increment=1;
 
 create table if not exists mission(
   name ENUM('Assassination', 'Capture', 'Interception', 'Recon',
@@ -83,7 +83,7 @@ create table if not exists minion(
   grade char(1) not null,
   base Integer not null,
   Foreign Key(base) references base(id)
-) ENGINE=INNODB;
+) ENGINE=INNODB auto_increment=10000;
 
 create table if not exists muscle(
   id Integer Primary Key,
@@ -107,8 +107,15 @@ create table if not exists tech(
 ) ENGINE=INNODB;
 
 
-# alter to allow auto_increment
-alter table minion auto_increment=100000;
-alter table boss   auto_increment=100000;
-alter table threat auto_increment=1;
-alter table bass   auto_increment=1;
+############
+# Triggers #
+############
+
+create trigger risk_upper_insert before insert on region for each row
+set new.risk = upper(new.risk);
+
+create trigger threat_upper_insert before insert on threat for each row
+set new.risk = upper(new.risk);
+
+create trigger minion_upper_insert before insert on minion for each row
+set new.grade = upper(new.grade);
