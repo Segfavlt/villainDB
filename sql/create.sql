@@ -80,7 +80,7 @@ create table if not exists allies(
 # assigned_minion renamed to minion
 create table if not exists minion(
   id Integer Primary Key auto_increment,
-  grade ENUM('D', 'C', 'B', 'A') not null,
+  grade ENUM('D', 'C', 'B', 'A', 'S') not null,
   base Integer not null,
   Foreign Key(base) references base(id)
 ) ENGINE=INNODB auto_increment=10000;
