@@ -7,35 +7,35 @@ use villainDB;
 # id / region #
 ###############
 
-INSERT INTO base
-VALUES (1, 'North America');
+INSERT INTO base(region)
+VALUES ('North America');
 
-INSERT INTO base
-VALUES (2, 'Europe');
+INSERT INTO base(region)
+VALUES ('Europe');
 
-INSERT INTO base
-VALUES (3, 'Africa');
+INSERT INTO base(region)
+VALUES ('Africa');
 
-INSERT INTO base
-VALUES (4, 'South America');
+INSERT INTO base(region)
+VALUES ('South America');
 
-INSERT INTO base
-VALUES (5, 'Asia');
+INSERT INTO base(region)
+VALUES ('Asia');
 
-INSERT INTO base
-VALUES (6, 'North America');
+INSERT INTO base(region)
+VALUES ('North America');
 
-INSERT INTO base
-VALUES (7, 'Europe');
+INSERT INTO base(region)
+VALUES ('Europe');
 
-INSERT INTO base
-VALUES (8, 'Africa');
+INSERT INTO base(region)
+VALUES ('Africa');
 
-INSERT INTO base
-VALUES (9, 'South America');
+INSERT INTO base(region)
+VALUES ('South America');
 
-INSERT INTO base
-VALUES (10, 'Asia');
+INSERT INTO base(region)
+VALUES ('Asia');
 
 ###############
 # Table: boss #

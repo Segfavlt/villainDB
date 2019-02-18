@@ -1,41 +1,49 @@
 use villainDB;
 
 
-###############
-# Table: base #
-###############
-# id / region #
-###############
+########
+# base #
+########
 
-INSERT INTO base
-VALUES (1, 'North America');
+insert into base(region)values (
+  'North America'
+);
 
-INSERT INTO base
-VALUES (2, 'Europe');
+insert into base(region)values (
+  'Europe'
+);
 
-INSERT INTO base
-VALUES (3, 'Africa');
+insert into base(region)values (
+  'Africa'
+);
 
-INSERT INTO base
-VALUES (4, 'South America');
+insert into base(region)values (
+  'South America'
+);
 
-INSERT INTO base
-VALUES (5, 'Asia');
+insert into base(region)values (
+  'Asia'
+);
 
-INSERT INTO base
-VALUES (6, 'North America');
+insert into base(region)values (
+  'North America'
+);
 
-INSERT INTO base
-VALUES (7, 'Europe');
+insert into base(region)values (
+  'Europe'
+);
 
-INSERT INTO base
-VALUES (8, 'Africa');
+insert into base(region)values (
+  'Africa'
+);
 
-INSERT INTO base
-VALUES (9, 'South America');
+insert into base(region)values (
+  'South America'
+);
 
-INSERT INTO base
-VALUES (10, 'Asia');
+insert into base(region)values (
+  'Asia'
+);
 
 ###########
 # Minions #
@@ -261,92 +269,265 @@ insert into tech values(
   'Temporal Manipulator'
 );
 
-###############
-# Table: boss #
-####################################
-# id / base / effectiveness / name #
-####################################
+########
+# boss #
+########
 
-INSERT INTO boss(base, effectiveness, name)
-VALUES (1, 5, 'Lazy Eye');
+insert into boss(base, effectiveness, name) values(
+  1,
+  5, 
+  'Lazy Eye'
+);
 
-INSERT INTO boss
-VALUES (2, 6, 'Fuhrer');
+insert into boss(base, effectiveness, name) values(
+  2,
+  6,
+  'Fuhrer'
+);
 
-INSERT INTO boss
-VALUES (3, 6, 'Mad General');
+insert into boss(base, effectiveness, name) values(
+  3,
+  6,
+  'Mad General'
+);
 
-INSERT INTO boss
-VALUES (4, 9, 'Narco');
+insert into boss(base, effectiveness, name) values(
+  4,
+  9,
+  'Narco'
+);
 
-INSERT INTO boss
-VALUES (5, 9, 'The Charizard');
+insert into boss(base, effectiveness, name) values(
+  5,
+  9,
+  'The Charizard'
+);
 
-INSERT INTO boss
-VALUES (6, 5, 'Captain Crook');
+insert into boss(base, effectiveness, name) values(
+  6,
+  5,
+  'Captain Crook'
+);
 
-INSERT INTO boss
-VALUES (7, 6, 'Gill');
+insert into boss(base, effectiveness, name) values(
+  7,
+  6,
+  'Gill'
+);
 
-INSERT INTO boss
-VALUES (8, 6, 'Timon');
+insert into boss(base, effectiveness, name) values(
+  8,
+  6,
+  'Timon'
+);
 
-INSERT INTO boss
-VALUES (9, 9, 'El Loco');
+insert into boss(base, effectiveness, name) values(
+  9,
+  9,
+  'El Loco'
+);
 
-INSERT INTO boss
-VALUES (10, 9, 'Ambrocio');
+insert into boss(base, effectiveness, name) values(
+  10,
+  9,
+  'Ambrocio'
+);
 
 ###########
 # mission #
-########################
-# name / boss / target #
-########################
+###########
 
-INSERT INTO mission
-VALUES ('Assassination', 1, 'Gordon Bates');
+insert into mission values(
+  'Assassination',
+  1,
+  'Gordon Bates'
+);
 
-INSERT INTO mission
-VALUES ('Assassination', 2, 'Rebecca Guerra');
+insert into mission values(
+  'Assassination',
+  2,
+  'Rebecca Guerra'
+);
 
-INSERT INTO mission
-VALUES ('Assassination', 3, 'Hassan Karim');
+insert into mission values(
+  'Assassination',
+  3,
+  'Hassan Karim'
+);
 
-INSERT INTO mission
-VALUES ('Assassination', 4, 'Zhang Huang');
+insert into mission values(
+  'Assassination',
+  4,
+  'Zhang Huang'
+);
 
-INSERT INTO mission
-VALUES ('Capture', 5, 'Imelda Barrio');
+insert into mission values(
+  'Capture',
+  5,
+  'Imelda Barrio'
+);
 
-INSERT INTO mission
-VALUES ('Capture', 6, 'Steve McNeil');
+insert into mission values(
+  'Capture',
+  6,
+  'Steve McNeil'
+);
 
-INSERT INTO mission
-VALUES ('Capture', 7, 'Jesse Kramer');
+insert into mission values(
+  'Capture',
+  7,
+  'Jesse Kramer'
+);
 
-INSERT INTO mission
-VALUES ('Capture', 8, 'Carlos Ortiz');
+insert into mission values(
+  'Capture',
+  8,
+  'Carlos Ortiz'
+);
 
-INSERT INTO mission
-VALUES ('Interception', 9, 'Esmeralda Transmission Tower');
+insert into mission values(
+  'Interception',
+  9,
+  'Esmeralda Transmission Tower'
+);
 
-INSERT INTO mission
-VALUES ('Interception', 10, 'UPS Truck #234');
+insert into mission values(
+  'Interception',
+  10,
+  'UPS Truck #234'
+);
 
-INSERT INTO mission
-VALUES ('Interception', 01, 'Remote Observation Center');
+insert into mission values(
+  'Interception',
+  1,
+  'Remote Observation Center'
+);
 
-INSERT INTO mission
-VALUES ('Interception', 02, 'Prison Convoy');
+insert into mission values(
+  'Interception',
+  2,
+  'Prison Convoy'
+);
 
-INSERT INTO mission
-VALUES ('Recon', 1, 'CSIS Headquarters');
+insert into mission values(
+  'Recon',
+  1,
+  'CSIS Headquarters'
+);
 
-INSERT INTO mission
-VALUES ('Recon', 2, 'Steel Factory');
+insert into mission values(
+  'Recon',
+  2,
+  'Steel Factory'
+);
 
-INSERT INTO mission
-VALUES ('Recon', 3, 'Cairo International Airport');
+insert into mission values(
+  'Recon',
+  3,
+  'Cairo International Airport'
+);
 
-INSERT INTO mission
-VALUES ('Recon', 4, 'Puerto De Balboa');
+insert into mission values(
+  'Recon',
+  4,
+  'Puerto De Balboa'
+);
+
+#######################
+# mission_description #
+#######################
+
+insert into mission_description values(
+  'Assassination',
+  'Gordon Bates',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Assassination',
+  'Rebecca Guerra',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Assassination',
+  'Hassan Karim',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Assassination',
+  'Zhang Huang',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Capture',
+  'Imelda Barrio',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Capture',
+  'Steve McNeil',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Capture',
+  'Jesse Kramer',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Capture',
+  'Carlos Ortiz',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Interception',
+  'Esmeralda Transmission Tower',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Interception',
+  'UPS Truck #234'
+);
+
+insert into mission_description values(
+  'Interception',
+  'Remote Observation Center',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Interception',
+  'Prison Convoy',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Recon',
+  'CSIS Headquarters',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Recon',
+  'Steel Factory',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Recon',
+  'Cairo International Airport',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
+
+insert into mission_description values(
+  'Recon',
+  'Puerto De Balboa',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+);
