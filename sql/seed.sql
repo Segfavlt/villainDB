@@ -493,7 +493,8 @@ insert into mission_description values(
 
 insert into mission_description values(
   'Interception',
-  'UPS Truck #234'
+  'UPS Truck #234',
+  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
 );
 
 insert into mission_description values(
