@@ -15,7 +15,7 @@ use villainDB;
 create table if not exists region(
   name ENUM('North America', 'South America', 'Africa',
     'Europe', 'Asia') Primary Key,
-  risk char(1) not null
+  risk ENUM('D', 'C', 'B', 'A', 'S') not null
 ) ENGINE=INNODB;
 
 create table if not exists base(
@@ -37,7 +37,7 @@ create table if not exists boss(
 # threatening_threat renamed to threat
 create table if not exists threat(
   id Integer auto_increment Primary Key,
-  risk char(1) not null,
+  risk ENUM('D', 'C', 'B', 'A', 'S') not null,
   name varchar(30) not null,
   region ENUM('North America', 'South America', 'Africa',
     'Europe', 'Asia') not null,
@@ -80,7 +80,7 @@ create table if not exists allies(
 # assigned_minion renamed to minion
 create table if not exists minion(
   id Integer Primary Key auto_increment,
-  grade char(1) not null,
+  grade ENUM('D', 'C', 'B', 'A') not null,
   base Integer not null,
   Foreign Key(base) references base(id)
 ) ENGINE=INNODB auto_increment=10000;
