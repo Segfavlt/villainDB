@@ -1,8 +1,70 @@
 use villainDB;
 
+##########
+# Region #
+##########
+
+insert into region values(
+	'North America',
+	'S'
+);
+
+insert into region values(
+	'South America',
+	'C'
+);
+
+insert into region values(
+	'Africa',
+	'D'
+);
+
+insert into region values(
+	'Europe',
+	'B'
+);
+
+insert into region values(
+	'Asia',
+	'A'
+);
+
+###########
+# Threat #
+###########
+
+insert into threat(risk, name, region) values(
+	'A',
+	'Black Panther',
+	'Africa'
+);
+
+insert into threat(risk, name, region) values(
+	'S',
+	'Russian President',
+	'Europe'
+);
+
+insert into threat(risk, name, region) values(
+	'C',
+	'Captain America',
+	'North America'
+);
+
+insert into threat(risk, name, region) values(
+	'D',
+	'Nacho Libre',
+	'South America'
+);
+
+insert into threat(risk, name, region) values(
+	'A',
+	'Gundam',
+	'Asia'
+);
 
 ########
-# base #
+# Base #
 ########
 
 insert into base(region)values (
@@ -125,7 +187,7 @@ insert into minion(grade, base) values(
 );
 
 insert into minion(grade, base) values(
-  'S'
+  'S',
    10
 );
 
@@ -170,31 +232,31 @@ insert into minion(grade, base) values(
 #######
 
 insert into spy values(
-  3,
+  10003,
   5,
-  'Taser Pen',
+  'Taser Pen'
 );
 
 insert into spy values(
-  5,
+  10005,
   1,
   'Polyurethane cloak'
 );
 
 insert into spy values(
-  4,
+  10004,
   7,
   'Sonic Blaster'
-)
+);
 
 insert into spy values(
-  9,
+  10009,
   2,
   'Hologram Projector'
 );
 
 insert into spy values(
-  11,
+  10011,
   8,
   'Laser Cutter'
 );
@@ -206,31 +268,31 @@ insert into spy values(
 
 
 insert into muscle values(
-  2,
+  10002,
   9,
   'MP5'
 );
 
 insert into muscle values(
-  6,
+  10006,
   3,
   'Barrett M82'
 );
 
 insert into muscle values(
-  13,
+  10013,
   5,
   'De-atomizer'
 );
 
 insert into muscle values(
-  17,
+  10017,
   7,
   'Plasma Cannon'
 );
 
 insert into muscle values(
-  20,
+  10020,
   2,
   'AK-47'
 );
@@ -240,37 +302,37 @@ insert into muscle values(
 ########
 
 insert into tech values(
-  19,
+  10019,
   4,
   "Hydospanner"
 );
 
 insert into tech values(
-  18,
+  10018,
   8,
   'Holographic scanner'
 );
 
 insert into tech values(
-  1,
+  10001,
   2,
   '3D Printer'
 );
 
 insert into tech values(
-  8,
+  10008,
   5,
   'Foam Steel'
 );
 
 insert into tech values(
-  14,
+  10014,
   4,
   'Temporal Manipulator'
 );
 
 ########
-# boss #
+# Boss #
 ########
 
 insert into boss(base, effectiveness, name) values(
@@ -331,6 +393,64 @@ insert into boss(base, effectiveness, name) values(
   10,
   9,
   'Ambrocio'
+);
+
+##########
+# Hero #
+##########
+
+insert into hero values(
+	1,
+	'Unknown'
+);
+
+insert into hero values(
+	2,
+	'Vladimir Putin'
+);
+
+insert into hero values(
+	3,
+	'Steve Rogers'
+);
+
+insert into hero values(
+	4,
+	'angsty teen'
+);
+
+insert into hero values(
+	5,
+	'Jack Black'
+);
+
+##########
+# Allies #
+##########
+
+insert into allies values(
+	1,
+	3
+);
+
+insert into allies values(
+	2,
+	5
+);
+
+insert into allies values(
+	3,
+	1
+);
+
+insert into allies values(
+	5,
+	2
+);
+
+insert into allies values(
+	4,
+	2
 );
 
 ###########
