@@ -338,13 +338,13 @@ insert into tech values(
 insert into boss(base, effectiveness, name) values(
   1,
   5,
-  'Lazy Eye'
+  'Crazy Eyes'
 );
 
 insert into boss(base, effectiveness, name) values(
   2,
   6,
-  'Fuhrer'
+  'Vader'
 );
 
 insert into boss(base, effectiveness, name) values(
