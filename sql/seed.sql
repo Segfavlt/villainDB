@@ -626,29 +626,29 @@ insert into mission_description values(
 insert into mission_description values(
   'Interception',
   'Prison Convoy',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Intercept and extract allied VIP "Hogtie" to friendly safehouse: use of heavy weapons authorized, expect heavy resistance of core escort elements'
 );
 
 insert into mission_description values(
   'Recon',
   'CSIS Headquarters',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Intelligence gathering of physical security details and patrol routes, in preparation for installation of monitoring devices to better observe anti-villain activities'
 );
 
 insert into mission_description values(
   'Recon',
   'Steel Factory',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Following up on rumour of potentially useful heavy industrial smelting equipment left behind, may be useful for future weapons research'
 );
 
 insert into mission_description values(
   'Recon',
   'Cairo International Airport',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Infiltrate and identify airport security/admin candidates for cash bribes or blackmail to expediate future smuggling of goods in region'
 );
 
 insert into mission_description values(
   'Recon',
   'Puerto De Balboa',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Infiltrate and assess Port of Balboa for suitability of future mission asset smuggling into North America'
 );
