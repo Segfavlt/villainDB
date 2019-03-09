@@ -337,7 +337,7 @@ insert into tech values(
 
 insert into boss(base, effectiveness, name) values(
   1,
-  5, 
+  5,
   'Lazy Eye'
 );
 
@@ -560,37 +560,37 @@ insert into mission values(
 insert into mission_description values(
   'Assassination',
   'Gordon Bates',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Assassinate the Commissioner of Gotham city.'
 );
 
 insert into mission_description values(
   'Assassination',
   'Rebecca Guerra',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Assassinate the leader of the UK parliament.'
 );
 
 insert into mission_description values(
   'Assassination',
   'Hassan Karim',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
-);
-
-insert into mission_description values(
-  'Assassination',
-  'Zhang Huang',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Assassinate the top general of Egyptian military'
 );
 
 insert into mission_description values(
   'Capture',
   'Imelda Barrio',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Assassinate the leader of Social Liberal Party in Brazil'
+);
+
+insert into mission_description values(
+  'Assassination',
+  'Zhang Huang',
+  'Assassinate the CEO of Japan\'s top military contractor'
 );
 
 insert into mission_description values(
   'Capture',
   'Steve McNeil',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Capture the vice president of the USA'
 );
 
 insert into mission_description values(
