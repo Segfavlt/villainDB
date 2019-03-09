@@ -560,13 +560,13 @@ insert into mission values(
 insert into mission_description values(
   'Assassination',
   'Gordon Bates',
-  'Assassinate the Commissioner of Gotham city.'
+  'Assassinate the Commissioner of Gotham city'
 );
 
 insert into mission_description values(
   'Assassination',
   'Rebecca Guerra',
-  'Assassinate the leader of the UK parliament.'
+  'Assassinate the leader of the UK parliament'
 );
 
 insert into mission_description values(
@@ -596,31 +596,31 @@ insert into mission_description values(
 insert into mission_description values(
   'Capture',
   'Jesse Kramer',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Capture the lead scientist at the European Space Agency'
 );
 
 insert into mission_description values(
   'Capture',
   'Carlos Ortiz',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Capture the Ecuadorian Ambassador to Algeria'
 );
 
 insert into mission_description values(
   'Interception',
   'Esmeralda Transmission Tower',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Intercept communication between government and INTERPOL'
 );
 
 insert into mission_description values(
   'Interception',
   'UPS Truck #234',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Capture and seize valuable cargo'
 );
 
 insert into mission_description values(
   'Interception',
   'Remote Observation Center',
-  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean'
+  'Intercept incoming transmission from International Space Station'
 );
 
 insert into mission_description values(
