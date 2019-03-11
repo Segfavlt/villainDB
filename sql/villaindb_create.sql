@@ -12,6 +12,28 @@ use villainDB;
 # Table Creation #
 ##################
 
+create table if not exists users (
+  id int primary key auto_increment,
+  username varchar(20) not null,
+  passwd char(95) not null
+) ENGINE=INNODB;
+
+create table if not exists  roles (
+  id int primary key,
+  role enum('boss', 'minion', 'villain') not null
+) ENGINE=INNODB;
+
+create table if not exists user_role (
+  user int primary key,
+  role int not null,
+  foreign key(user) references users(id)
+    on update no action
+    on delete cascade,
+  foreign key(role) references roles(id)
+    on update no action
+    on delete cascade
+) ENGINE=INNODB;
+
 create table if not exists region(
   name ENUM('North America', 'South America', 'Africa',
     'Europe', 'Asia') Primary Key,
@@ -27,12 +49,13 @@ create table if not exists base(
 
 # managing_boss renamed to boss
 create table if not exists boss(
-  id Integer auto_increment Primary Key,
+  id Integer Primary Key,
   base Integer not null,
   effectiveness Integer not null,
   name varchar(20) not null,
+  Foreign Key(id) references users(id),
   Foreign Key(base) references base(id)
-) ENGINE=INNODB auto_increment=1;
+) ENGINE=INNODB;
 
 # threatening_threat renamed to threat
 create table if not exists threat(
@@ -58,7 +81,7 @@ create table if not exists mission_description(
   name ENUM('Assassination', 'Capture', 'Interception', 'Recon',
     'Destruction') not null,
   target varchar(30) not null,
-  description varchar(100) not null,
+  description varchar(300) not null,
   Primary Key(name, target),
   Foreign Key(name, target) references mission(name, target)
 ) ENGINE=INNODB;
@@ -79,11 +102,12 @@ create table if not exists allies(
 
 # assigned_minion renamed to minion
 create table if not exists minion(
-  id Integer Primary Key auto_increment,
+  id Integer Primary Key,
   grade ENUM('D', 'C', 'B', 'A', 'S') not null,
   base Integer not null,
+  Foreign Key(id) references users(id),
   Foreign Key(base) references base(id)
-) ENGINE=INNODB auto_increment=10000;
+) ENGINE=INNODB;
 
 create table if not exists muscle(
   id Integer Primary Key,
