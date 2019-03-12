@@ -4,174 +4,140 @@ use villainDB;
 # Users #
 #########
 
-insert into users(username, passwd) values(
-  'villain',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$bWt1UjhQWk1ZNFlJME1iRg$/wi8fG9ZmoEmAZzYY9bDV3TYbzV6feH/dHUuJbrTUs0'
 );
 
-insert into users(username, passwd) values(
-  'boss1',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$NVNRTnF0Mmo0NlI0b0EuVg$b9ZKZ+EnAb7Q6HgWrF8SoxL0RWlYo+K/YbB+WX98QgM'
 );
 
-insert into users(username, passwd) values(
-  'boss2',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$d0QvVmxIRlhHUEJFS1IwVw$WkYqnOBsJQizemkmV60j55UAzsI1soMnr8f/Jl+XLEY'
 );
 
-insert into users(username, passwd) values(
-  'boss3',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$SzNsWnhwQ0YubXVsUjdQQw$3qsu9lvGzjQsThtNi762lGOwMrGHXavkH3DewyrzgKU'
 );
 
-insert into users(username, passwd) values(
-  'boss4',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$bkd5OTA4cFQ0alBhbG1lbw$HXnzJvNmi7X9E7pw5QPxg5sbR9I5l1HZ/88Y2ZnrLD0'
 );
 
-insert into users(username, passwd) values(
-  'boss5',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$ZFJ4NHlFVUM5RWo1bERQaQ$RDaOSEqqepb45SCHylR3Hpf565RZWU/i+b9kLj0RvrQ'
 );
 
-insert into users(username, passwd) values(
-  'boss6',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$UVgzZW11NTFZYTJOeGJCQw$UkBN6FmdT7JlIFCcnuHjsjQluhxpyBSED3ptWsztRgo'
 );
 
-insert into users(username, passwd) values(
-  'boss7',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$VlZsQkFTSU1uNktRZDZ4dQ$foPgJhtoVZvWw77QKanc0ywkGY4y1XfTgkn4X0WEDXs'
 );
 
-insert into users(username, passwd) values(
-  'boss8',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$VExwV2FHL1hLMjhKOURmTg$Z+qwIrl7K8oyqxinT3Xw4FHVqC0uBDnii9M3n5Hz/iY'
 );
 
-insert into users(username, passwd) values(
-  'boss9',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$aUJrSlFOWTVJZlFmeW9jZw$gw4DurmRVJhOGgrBiQr/4YZ24PLwf4lZtIV/230Cj8A'
 );
 
-insert into users(username, passwd) values(
-  'boss10',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$c1dRTk4vOHBRaWRNczhlcg$iwyWNirxu+OCZPwePuuwmbwFvzzOFefDc8t180trsfI'
 );
 
-insert into users(username, passwd) values(
-  'minion1',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$bW4xSUltMmh6STNmYzduVg$cU+iKwK0jfjpz6k435yCWeIKiex6t/B8PQ5a5hJkWwU'
 );
 
-insert into users(username, passwd) values(
-  'minion2',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$blo5Ny9WaUxHa3ZlejllTA$fk5gHxBnvAyhasUfEBtNA80udMfLB1/X8RYXBeaiVEg'
 );
 
-insert into users(username, passwd) values(
-  'minion3',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$QmVWUDNRZHdlMEwySExwNw$Rg46dhgmCr9FwbOiDBoj31qWnogunRIlNFA8fTTxs40'
 );
 
-insert into users(username, passwd) values(
-  'minion4',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$Tkc0WGQveENmOVU2MHFCRg$YHktJJISVtDFhv99B8HNEKRPivA5P8A8Ccx8qXKObCo'
 );
 
-insert into users(username, passwd) values(
-  'minion5',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$TTZtaFR4QkpVOE1LNEtwRg$8aIzXPGGSXgWduxbMkkRDPGkaHUZS4RNxSPrigxK5QU'
 );
 
-insert into users(username, passwd) values(
-  'minion6',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$VFVHV0guek41LnFjYlpvYQ$vJZHp4YetkvfcVS2JfQ8bF8Gr1ycaM8mr2FvvCaX1HY'
 );
 
-insert into users(username, passwd) values(
-  'minion7',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$VXJ5ZnRTSXBta1NSWWhqVA$q3yvXvFjNYZSLikt59GbUHuCRSsR9vJidYWdQ1/4ebI'
 );
 
-insert into users(username, passwd) values(
-  'minion8',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$MUpVbjV5TUVULmcwTktJZQ$jIGglu0l9d4FZvRdpaZiHnxEiVvw7pFjsg2RWy7nk34'
 );
 
-insert into users(username, passwd) values(
-  'minion9',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$YVBnZjhhZS5RSjJlcDA2cQ$m5XyAyJ7Itd+c8RB/Pim65KnPf5daXMjHzvT8nJykYw'
 );
 
-insert into users(username, passwd) values(
-  'minion10',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$V1hiVHYuRFkvNFBQSHhRYQ$mexniKURFHGSihop3PPI1f+JrcEeOJA8q3NmsW4/mow'
 );
 
-insert into users(username, passwd) values(
-  'minion11',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$aUNqMzRpWmVRODhCaTJiVg$IvKTOJ4xfSKLtKpU3hwcEOo+jORefmq9zJXviMOxheE'
 );
 
-insert into users(username, passwd) values(
-  'minion12',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$OHFqYmZEazAvVU9OUkpVaA$t5oZ9KXENpPG+Hi26y+zEO1LQTLel2Zh/6UL+HY22UY'
 );
 
-insert into users(username, passwd) values(
-  'minion13',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$M21jcUguRDRWckwucmVLeQ$n8H7ngmi2ldmUfOhIkEAzos9vRuhmUjb+mwgJFlS2No'
 );
 
-insert into users(username, passwd) values(
-  'minion14',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$azRGNENBN1JrMHpoVU0vLw$oegsM6PS6WhD+OFX3RfmVmM4QJ4hdpfeS0xdiWUvOkc'
 );
 
-insert into users(username, passwd) values(
-  'minion15',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$NVBjMzZFWnJTcmswUHkucA$Tt/nGBwuxx2zIzvZRoGqY0QNwRMSL8x9dp9rhxKtSEs'
 );
 
-insert into users(username, passwd) values(
-  'minion16',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$eEthWFpIMGRVWWF6UW13Tg$hHdCIH3PThjb0te9tfwGX3zaW4F5yuQXGD98bj7EkvE'
 );
 
-insert into users(username, passwd) values(
-  'minion17',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$M3dQaDBQSDE5aGVPWDMzMw$URpLDfT8J3LVIk85EI1mXvo18uJhQp3RiQ6Dfq8wW/A'
 );
 
-insert into users(username, passwd) values(
-  'minion18',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$NUVRcnIvM3BXTmVGM0tKZQ$AwW27KE0lDRWoCsartkuGinN9hr48tkioLc9qvw0ujY'
 );
 
-insert into users(username, passwd) values(
-  'minion19',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$WGhXRjBBU3RBalcvQW1ONg$BL5W96QUvKDdZrnigUyDmyk8B/9iZ73eXbRn6wJ9DwQ'
 );
 
-insert into users(username, passwd) values(
-  'minion20',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$YVRlSGpmQUM0clhyQ2sybg$tEDJIPBL18shgqGKL/KFSWzQnAfLq7cmJ5IKPMjRpUY'
 );
 
-insert into users(username, passwd) values(
-  'minion21',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$VXF2Z3QvSXl6N2ZNSy9qZA$0imIyeNI6inIoaXZEqEJqJ3XlL4lW+5rmmS8forJGrQ'
 );
 
-insert into users(username, passwd) values(
-  'minion22',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$NFdKZ2FYTjBOVFVyNUZiQw$lMwckV1guULNA4qZoNzgNhCUuUwEeBO9YX70SBsQ404'
 );
 
-insert into users(username, passwd) values(
-  'minion23',
-  'password'
+insert into users(passwd) values(
+  '$argon2i$v=19$m=4096,t=6,p=4$Y01ENk5SWnEyV3hwTnlrNQ$sGFKcbmrrYLk/BOJP7H1OADRnG8U9gT4jQTqzmT8pZU'
 );
 
 
@@ -201,176 +167,176 @@ insert into roles(id, role) values(
 # villain #
 
 insert into user_role(user, role) values(
-  1,
+  100000,
   1
 );
 
 # bosses #
 
 insert into user_role(user, role) values(
-  2,
+  100001,
   2
 );
 
 insert into user_role(user, role) values(
-  3,
+  100002,
   2
 );
 
 insert into user_role(user, role) values(
-  4,
+  100003,
   2
 );
 
 insert into user_role(user, role) values(
-  5,
+  100004,
   2
 );
 
 insert into user_role(user, role) values(
-  6,
+  100005,
   2
 );
 
 insert into user_role(user, role) values(
-  7,
+  100006,
   2
 );
 
 insert into user_role(user, role) values(
-  8,
+  100007,
   2
 );
 
 insert into user_role(user, role) values(
-  9,
+  100008,
   2
 );
 
 insert into user_role(user, role) values(
-  10,
+  100009,
   2
 );
 
 insert into user_role(user, role) values(
-  11,
+  100010,
   2
 );
 
 # minions #
 
 insert into user_role(user, role) values(
-  12,
+  100011,
   3
 );
 
 insert into user_role(user, role) values(
-  13,
+  100012,
   3
 );
 
 insert into user_role(user, role) values(
-  14,
+  100013,
   3
 );
 
 insert into user_role(user, role) values(
-  15,
+  100014,
   3
 );
 
 insert into user_role(user, role) values(
-  16,
+  100015,
   3
 );
 
 insert into user_role(user, role) values(
-  17,
+  100016,
   3
 );
 
 insert into user_role(user, role) values(
-  18,
+  100017,
   3
 );
 
 insert into user_role(user, role) values(
-  19,
+  100018,
   3
 );
 
 insert into user_role(user, role) values(
-  20,
+  100019,
   3
 );
 
 insert into user_role(user, role) values(
-  21,
+  100020,
   3
 );
 
 insert into user_role(user, role) values(
-  22,
+  100021,
   3
 );
 
 insert into user_role(user, role) values(
-  23,
+  100022,
   3
 );
 
 insert into user_role(user, role) values(
-  24,
+  100023,
   3
 );
 
 insert into user_role(user, role) values(
-  25,
+  100024,
   3
 );
 
 insert into user_role(user, role) values(
-  26,
+  100025,
   3
 );
 
 insert into user_role(user, role) values(
-  27,
+  100026,
   3
 );
 
 insert into user_role(user, role) values(
-  28,
+  100027,
   3
 );
 
 insert into user_role(user, role) values(
-  29,
+  100028,
   3
 );
 
 insert into user_role(user, role) values(
-  30,
+  100029,
   3
 );
 
 insert into user_role(user, role) values(
-  31,
+  100030,
   3
 );
 
 insert into user_role(user, role) values(
-  32,
+  100031,
   3
 );
 
 insert into user_role(user, role) values(
-  33,
+  100032,
   3
 );
 
 insert into user_role(user, role) values(
-  34,
+  100033,
   3
 );
 
@@ -486,139 +452,139 @@ insert into base(region)values (
 ###########
 
 insert into minion(id, grade, base) values(
-   12,
+  100011,
   'B',
    1
 );
 
 insert into minion(id, grade, base) values(
-   13,
+  100012,
   'D',
    8
 );
 
 insert into minion(id, grade, base) values(
-   14,
+  100013,
   'S',
    6
 );
 
 insert into minion(id, grade, base) values(
-   15,
+  100014,
   'S',
    1
 );
 
 insert into minion(id, grade, base) values(
-   16,
+  100015,
   'A',
    7
 );
 
 insert into minion(id, grade, base) values(
-   17,
+  100016,
   'C',
    5
 );
 
 insert into minion(id, grade, base) values(
-   18,
+  100017,
   'D',
    4
 );
 
 insert into minion(id, grade, base) values(
-   19,
+  100018,
   'B',
    10
 );
 
 insert into minion(id, grade, base) values(
-   20,
+  100019,
   'A',
    9
 );
 
 insert into minion(id, grade, base) values(
-   21,
+  100020,
   'D',
    2
 );
 
 insert into minion(id, grade, base) values(
-   22,
+  100021,
   'A',
    4
 );
 
 insert into minion(id, grade, base) values(
-   23,
+  100022,
   'B',
    3
 );
 
 insert into minion(id, grade, base) values(
-   24,
+  100023,
   'S',
    5
 );
 
 insert into minion(id, grade, base) values(
-   25,
+  100024,
   'D',
    1
 );
 
 insert into minion(id, grade, base) values(
-   26,
+  100025,
   'A',
    4
 );
 
 insert into minion(id, grade, base) values(
-   27,
+  100026,
   'S',
    10
 );
 
 insert into minion(id, grade, base) values(
-   28,
+  100027,
   'A',
    8
 );
 
 insert into minion(id, grade, base) values(
-   29,
+  100028,
   'S',
    2
 );
 
 insert into minion(id, grade, base) values(
-   30,
+  100029,
   'A',
    9
 );
 
 insert into minion(id, grade, base) values(
-   31,
+  100030,
   'S',
    7
 );
 
 insert into minion(id, grade, base) values(
-   32,
+  100031,
   'A',
    4
 );
 
 insert into minion(id, grade, base) values(
-   33,
+  100032,
   'A',
    1
 );
 
 insert into minion(id, grade, base) values(
-   34,
+  100033,
   'S',
    9
 );
@@ -628,31 +594,31 @@ insert into minion(id, grade, base) values(
 #######
 
 insert into spy values(
-  12,
+  100011,
   5,
   'Taser Pen'
 );
 
 insert into spy values(
-  13,
+  100012,
   1,
   'Polyurethane cloak'
 );
 
 insert into spy values(
-  14,
+  100013,
   7,
   'Sonic Blaster'
 );
 
 insert into spy values(
-  15,
+  100014,
   2,
   'Hologram Projector'
 );
 
 insert into spy values(
-  16,
+  100015,
   8,
   'Laser Cutter'
 );
@@ -664,31 +630,31 @@ insert into spy values(
 
 
 insert into muscle values(
-  17,
+  100016,
   9,
   'MP5'
 );
 
 insert into muscle values(
-  18,
+  100017,
   3,
   'Barrett M82'
 );
 
 insert into muscle values(
-  19,
+  100018,
   5,
   'De-atomizer'
 );
 
 insert into muscle values(
-  20,
+  100019,
   7,
   'Plasma Cannon'
 );
 
 insert into muscle values(
-  21,
+  100020,
   2,
   'AK-47'
 );
@@ -698,31 +664,31 @@ insert into muscle values(
 ########
 
 insert into tech values(
-  22,
+  100021,
   4,
   "Hydospanner"
 );
 
 insert into tech values(
-  23,
+  100022,
   8,
   'Holographic scanner'
 );
 
 insert into tech values(
-  24,
+  100023,
   2,
   '3D Printer'
 );
 
 insert into tech values(
-  25,
+  100024,
   5,
   'Foam Steel'
 );
 
 insert into tech values(
-  26,
+  100025,
   4,
   'Temporal Manipulator'
 );
@@ -732,70 +698,70 @@ insert into tech values(
 ########
 
 insert into boss(id, base, effectiveness, name) values(
-  11,
+  100001,
   1,
   5,
   'Crazy Eyes'
 );
 
 insert into boss(id, base, effectiveness, name) values(
-  2,
+  100002,
   2,
   6,
   'Vader'
 );
 
 insert into boss(id, base, effectiveness, name) values(
-  3,
+  100003,
   3,
   6,
   'Mad General'
 );
 
 insert into boss(id, base, effectiveness, name) values(
-  4,
+  100004,
   4,
   9,
   'Narco'
 );
 
 insert into boss(id, base, effectiveness, name) values(
-  5,
+  100005,
   5,
   9,
   'The Charizard'
 );
 
 insert into boss(id, base, effectiveness, name) values(
-  6,
+  100006,
   6,
   5,
   'Captain Crook'
 );
 
 insert into boss(id, base, effectiveness, name) values(
-  7,
+  100007,
   7,
   6,
   'Gill'
 );
 
 insert into boss(id, base, effectiveness, name) values(
-  8,
+  100008,
   8,
   6,
   'Timon'
 );
 
 insert into boss(id, base, effectiveness, name) values(
-  9,
+  100009,
   9,
   9,
   'El Loco'
 );
 
 insert into boss(id, base, effectiveness, name) values(
-  10,
+  100010,
   10,
   9,
   'Ambrocio'
@@ -865,97 +831,97 @@ insert into allies values(
 
 insert into mission values(
   'Assassination',
-  11,
+  100001,
   'Gordon Bates'
 );
 
 insert into mission values(
   'Assassination',
-  2,
+  100002,
   'Rebecca Guerra'
 );
 
 insert into mission values(
   'Assassination',
-  3,
+  100003,
   'Hassan Karim'
 );
 
 insert into mission values(
   'Assassination',
-  4,
+  100004,
   'Zhang Huang'
 );
 
 insert into mission values(
   'Capture',
-  5,
+  100005,
   'Imelda Barrio'
 );
 
 insert into mission values(
   'Capture',
-  6,
+  100006,
   'Steve McNeil'
 );
 
 insert into mission values(
   'Capture',
-  7,
+  100007,
   'Jesse Kramer'
 );
 
 insert into mission values(
   'Capture',
-  8,
+  100008,
   'Carlos Ortiz'
 );
 
 insert into mission values(
   'Interception',
-  9,
+  100009,
   'Esmeralda Transmission Tower'
 );
 
 insert into mission values(
   'Interception',
-  10,
+  100010,
   'UPS Truck #234'
 );
 
 insert into mission values(
   'Interception',
-  11,
+  100001,
   'Remote Observation Center'
 );
 
 insert into mission values(
   'Interception',
-  2,
+  100002,
   'Prison Convoy'
 );
 
 insert into mission values(
   'Recon',
-  11,
+  100001,
   'CSIS Headquarters'
 );
 
 insert into mission values(
   'Recon',
-  2,
+  100002,
   'Steel Factory'
 );
 
 insert into mission values(
   'Recon',
-  3,
+  100003,
   'Cairo International Airport'
 );
 
 insert into mission values(
   'Recon',
-  4,
+  100004,
   'Puerto De Balboa'
 );
 

@@ -14,9 +14,9 @@ use villainDB;
 
 create table if not exists users (
   id int primary key auto_increment,
-  username varchar(20) not null,
-  passwd char(95) not null
-) ENGINE=INNODB;
+  passwd char(95) not null,
+  logged_in bool default false
+) ENGINE=INNODB auto_increment=100000;
 
 create table if not exists  roles (
   id int primary key,
