@@ -1,5 +1,9 @@
-<!doctype html>
-
+<?php
+  session_start();
+  if ($_SESSION['authenticated'] == 1) {
+    header('Location: http://villaindb.com/success.php');
+  }
+?>
 <html lang="en">
 <head>
 
@@ -9,7 +13,7 @@
     shrink-to-fit=no">
 
     <!-- Bootstrap (check for updates) -->
-    <link href="../resources/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+    <link href="resources/css/bootstrap.css" rel="stylesheet" id="bootstrap-css">
     <title>villainDB</title>
 
 </head>
@@ -25,12 +29,12 @@
             <div class=" p-3 shadow rounded">
                 <div class="pt-3">
                     <img
-                        src="../resources/svg/villainDB.svg" alt="villainDB" height="46px"
+                        src="resources/svg/villainDB.svg" alt="villainDB" height="46px"
                         width="187px"
                     />
                 </div>
 
-                <form class="mt-5" action="../resources/php/login.php"
+                <form class="mt-5" action="resources/php/login_request.php"
                   method="post">
                     <div class="form-group">
                         <input type="text"
@@ -50,6 +54,12 @@
                         <label class="form-check-label text-dark"
                           for="rememberCheckBox">Remember me?</label>
                     </div>
+<?php
+
+  if (isset($_SESSION['loginerror'])) {
+    echo "<span> Failed to username or password</span>";
+  }
+?>
 
                     <div class="mt-5">
                         <button class="btn btn-sm btn-danger col"

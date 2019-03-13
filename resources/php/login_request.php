@@ -1,10 +1,12 @@
 <?php
+session_start();
 include 'connect.php';
 
 $user = trim($_POST['user']);
 $pass = trim($_POST['pwd']);
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db);
+
 $log_in_request = "select * from users where id='$user'";
 $logged_in_set = "update users set logged_in=1 where id='$user'";
 $get_role_query = "select roles.role from roles, user_role where roles.id = user_role.role and user_role.user = '$user'";
@@ -28,17 +30,26 @@ if ($auth_result->num_rows > 0) {
         }
 
         $_SESSION['user'] = $user;
-        echo $_SESSION['user']."<br>";
-        echo $_SESSION['role']."<br>";
+        $_SESSION['authenticated'] = true;
+
+        header('Location: http://villaindb.com/success.php');
+        exit;
       } else {
-          echo "<br> $user already logged in<br>";
+        $_SESSION['loginerror'] = 1;
+        $_SESSION['authenticated'] = false;
+        header('Location: http://villaindb.com/login.php');
       }
     } else {
-      echo "<br> Failed ot verify user or password<br>";
+      $_SESSION['loginerror'] = 1;
+      $_SESSION['authenticated'] = false;
+      header('Location: http://villaindb.com/login.php');
     }
   }
 } else {
-    echo "<br> Invalid user or password <br>";
+    $_SESSION['loginerror'] = 1;
+    $_SESSION['authenticated'] = false;
+    header('Location: http://villaindb.com/login.php');
 }
 $conn->close();
+
 ?>

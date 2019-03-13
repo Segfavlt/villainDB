@@ -1,15 +1,17 @@
 <?php
 include 'connect.php';
-
+session_start();
 $conn = new mysqli($db_host, $db_user, $db_pass, $db);
 
-$set_logged_out = "update users set logged_in=0 where id='$_SESSION['user']'";
+  if ($_SESSION['authenticated']) {
+    $user = $_SESSION['user'];
 
-$log_out_request = $conn -> query($set_logged_out);
+    $set_logged_out = "update users set logged_in=0 where id='$user'";
 
-session_destroy();
+    $log_out_request = $conn -> query($set_logged_out);
 
-
-
-
+    session_destroy();
+    var_dump($_SESSION);
+    header('Location: http://villaindb.com/login.php');
+}
 ?>
