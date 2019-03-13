@@ -1,22 +1,22 @@
 <?php
 $globals = array(
   'Home' => '/',
-  'Profile' => '../../pages/profile.php',
-  'Logout' => '../php/logout.php'
+  'Profile' => '/profile.php',
+  'Logout' => '/resources/php/logout.php'
   );
 
 $b_links = array(
-  'Minions' => '../../pages/boss/minions.php',
-  'Missons' => '../../pages/boss/missions.php',
-  'Base'    => '../../pages/boss/base.php',
-  'Threats' => '../../pages/boss/threats.php'
+  'Minions' => '/boss/minions.php',
+  'Missons' => '/boss/missions.php',
+  'Base'    => '/boss/base.php',
+  'Threats' => '/boss/threats.php'
 );
 
 $v_links = array(
-  'Bases'   => '../../pages/villain/base.php',
-  'Minions' => '../../pages/boss/minions.php',
-  'Missons' => '../../pages/boss/missions.php',
-  'Threats' => '../../pages/villain/threats.php'
+  'Bases'   => '/villain/base.php',
+  'Minions' => '/boss/minions.php',
+  'Missons' => '/boss/missions.php',
+  'Threats' => '/villain/threats.php'
 );
 
 ?>
@@ -41,7 +41,7 @@ $v_links = array(
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 <?php
 foreach ($globals as $name => $url) {
-  echo "a class=\"dropdown-item\" href=\"'$url'\">'$name'</a>";
+  echo "<a class=\"dropdown-item\" href=\"$url\">$name</a>";
 }
 ?>
         </div>
