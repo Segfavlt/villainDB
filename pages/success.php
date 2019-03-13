@@ -1,4 +1,3 @@
-success
 <?php
 switch ($_SESSION['role']) {
   case 'villain':
