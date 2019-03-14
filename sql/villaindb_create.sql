@@ -4,7 +4,7 @@
 
 drop user if exists 'villainDB';
 
-create user 'villainDB'@'%' identified by 'villaindb';
+create user 'villainDB'@'localhost' identified by 'villaindb';
 
 
 drop database if exists villainDB;
