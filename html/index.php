@@ -20,14 +20,14 @@ if ($_SESSION['authenticated']) {
   <title>villainDB</title>
 </head>
 
-<body class="bg-dark text-light">
+<body class="bg-secondary text-light">
 <div class="container">
     <div class="row m-4">
 
         <div class="col">
         </div>
 
-        <div class="col-4 bg-secondary">
+        <div class="col-4 bg-dark">
             <div class="p-3 shadow rounded">
                 <div class="pt-3">
                     <img

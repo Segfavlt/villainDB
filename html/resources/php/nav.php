@@ -20,8 +20,8 @@ $v_links = array(
 );
 
 ?>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">VillainDB</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
+  <a class="navbar-brand" href="#"><img src="/resources/svg/villainDB.svg" alt="VillainDB" /></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -32,16 +32,16 @@ $v_links = array(
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="/profile.php">Profile</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+         Menu
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
 <?php
 foreach ($globals as $name => $url) {
-  echo "<a class=\"dropdown-item\" href=\"$url\">$name</a>";
+  echo "<a class=\"bg-dark text-light dropdown-item\" href=\"$url\">$name</a>";
 }
 ?>
         </div>
