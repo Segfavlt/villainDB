@@ -2,9 +2,9 @@
 # Database Creation #
 #####################
 
-drop user if exists 'villainDB';
+drop user if exists 'villainDB'@'localhost';;
 
-create user 'villainDB'@'localhost' identified by 'villaindb';
+create user if not exists 'villainDB'@'localhost' identified by 'villaindb';
 
 
 drop database if exists villainDB;
@@ -154,4 +154,4 @@ set new.grade = upper(new.grade);
 # User Grant #
 ##############
 
-grant all on villainDB.* to 'villainDB'@'%';
+grant all on villainDB.* to 'villainDB'@'localhost';
