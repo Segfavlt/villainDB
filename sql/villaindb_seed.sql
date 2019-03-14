@@ -447,146 +447,193 @@ insert into base(region)values (
   'Asia'
 );
 
+###############
+# Adv Classes #
+###############
+
+insert into advanced values(
+  '0',
+  'minion'
+);
+
+insert into advanced values(
+  '1',
+  'spy'
+);
+
+insert into advanced values(
+  '2',
+  'muscle'
+);
+
+insert into advanced values(
+  '3',
+  'tech'
+);
+
 ###########
 # Minions #
 ###########
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100011,
   'B',
-   1
+  1,
+  '1'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100012,
   'D',
-   8
+  8,
+  '1'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100013,
   'S',
-   6
+  6,
+  '1'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100014,
   'S',
-   1
+  1,
+  '1'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100015,
   'A',
-   7
+  7,
+  '1'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100016,
   'C',
-   5
+  5,
+  '2'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100017,
   'D',
-   4
+  4,
+  '2'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100018,
   'B',
-   10
+  10,
+  '2'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100019,
   'A',
-   9
+  9,
+  '2'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100020,
   'D',
-   2
+  2,
+  '2'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100021,
   'A',
-   4
+  4,
+  '3'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100022,
   'B',
-   3
+  3,
+  '3'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100023,
   'S',
-   5
+  5,
+  '3'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100024,
   'D',
-   1
+  1,
+  '3'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100025,
   'A',
-   4
+  4,
+  '3'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100026,
   'S',
-   10
+  10,
+  '0'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100027,
   'A',
-   8
+  8,
+  '0'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100028,
   'S',
-   2
+  2,
+  '0'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100029,
   'A',
-   9
+  9,
+  '0'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100030,
   'S',
-   7
+  7,
+  '0'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100031,
   'A',
-   4
+  4,
+  '0'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100032,
   'A',
-   1
+  1,
+  '0'
 );
 
-insert into minion(id, grade, base) values(
+insert into minion(id, grade, base, class) values(
   100033,
   'S',
-   9
+  9,
+  '0'
 );
 
 #######

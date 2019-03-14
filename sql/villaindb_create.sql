@@ -19,14 +19,13 @@ use villainDB;
 
 create table if not exists users (
   id int primary key auto_increment,
-  passwd char(95) not null,
-  logged_in bool default false
-) ENGINE=INNODB auto_increment=100000;
+  passwd char(95) not null
+) engine=innodb auto_increment=100000;
 
 create table if not exists  roles (
   id int primary key,
   role enum('boss', 'minion', 'villain') not null
-) ENGINE=INNODB;
+) engine=innodb;
 
 create table if not exists user_role (
   user int primary key,
@@ -37,20 +36,20 @@ create table if not exists user_role (
   foreign key(role) references roles(id)
     on update no action
     on delete cascade
-) ENGINE=INNODB;
+) engine=innodb;
 
 create table if not exists region(
   name ENUM('North America', 'South America', 'Africa',
     'Europe', 'Asia') Primary Key,
   risk ENUM('D', 'C', 'B', 'A', 'S') not null
-) ENGINE=INNODB;
+) engine=innodb;
 
 create table if not exists base(
   id Integer Primary Key auto_increment,
   region ENUM('North America', 'South America', 'Africa',
     'Europe', 'Asia') not null,
   Foreign Key(region) references region(name)
-) ENGINE=INNODB auto_increment=1;
+) engine=innodb auto_increment=1;
 
 # managing_boss renamed to boss
 create table if not exists boss(
@@ -60,7 +59,7 @@ create table if not exists boss(
   name varchar(20) not null,
   Foreign Key(id) references users(id),
   Foreign Key(base) references base(id)
-) ENGINE=INNODB;
+) engine=innodb;
 
 # threatening_threat renamed to threat
 create table if not exists threat(
@@ -70,7 +69,7 @@ create table if not exists threat(
   region ENUM('North America', 'South America', 'Africa',
     'Europe', 'Asia') not null,
   Foreign Key(region) references region(name)
-) ENGINE=INNODB auto_increment=1;
+) engine=innodb auto_increment=1;
 
 create table if not exists mission(
   name ENUM('Assassination', 'Capture', 'Interception', 'Recon',
@@ -80,7 +79,7 @@ create table if not exists mission(
   Primary Key(name, target, boss),
   Index summary (name, target),
   Foreign Key(boss) references boss(id)
-) ENGINE=INNODB;
+) engine=innodb;
 
 create table if not exists mission_description(
   name ENUM('Assassination', 'Capture', 'Interception', 'Recon',
@@ -89,51 +88,59 @@ create table if not exists mission_description(
   description varchar(300) not null,
   Primary Key(name, target),
   Foreign Key(name, target) references mission(name, target)
-) ENGINE=INNODB;
+) engine=innodb;
 
 create table if not exists hero(
   id Integer Primary Key,
   identity varchar(30),
   Foreign Key(id) references threat(id)
     on delete cascade
-) ENGINE=INNODB;
+) engine=innodb;
 
 create table if not exists allies(
   hero Integer Primary Key,
   ally Integer not null,
   Foreign Key(hero) references hero(id),
   Foreign Key(ally) references hero(id)
-) ENGINE=INNODB;
+) engine=innodb;
+
+
+create table if not exists advanced(
+  rank enum('0','1','2','3') primary key,
+  class enum('minion', 'muscle', 'spy', 'tech') not null
+) engine=innodb;
 
 # assigned_minion renamed to minion
 create table if not exists minion(
   id Integer Primary Key,
   grade ENUM('D', 'C', 'B', 'A', 'S') not null,
   base Integer not null,
+  class enum('0','1','2','3') not null,
   Foreign Key(id) references users(id),
-  Foreign Key(base) references base(id)
-) ENGINE=INNODB;
+  Foreign Key(base) references base(id),
+  Foreign Key (class) references advanced(rank)
+) engine=innodb;
 
 create table if not exists muscle(
   id Integer Primary Key,
   att_power Integer not null,
   weapon varchar(20),
   Foreign Key(id) references minion(id)
-) ENGINE=INNODB;
+) engine=innodb;
 
 create table if not exists spy(
   id Integer Primary Key,
   subterfuge Integer not null,
   gadget varchar(20),
   Foreign Key(id) references minion(id)
-) ENGINE=INNODB;
+) engine=innodb;
 
 create table if not exists tech(
   id Integer Primary Key,
   repair_rating Integer not null,
   tool varchar(20),
   Foreign Key(id) references minion(id)
-) ENGINE=INNODB;
+) engine=innodb;
 
 
 ############
