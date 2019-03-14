@@ -27,14 +27,14 @@ $v_links = array(
   </button>
 
   <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-    <!-- left aligned items -->
     <ul class="navbar-nav mr-auto">
+      <!-- left aligned items go here-->
+    </ul>
+    <ul class="navbar-nav">
+      <!-- right aligned items go here-->
       <li class="nav-item active">
         <a class="nav-link" href="/">Home <span class="sr-only">(home)</span></a>
       </li>
-    </ul>
-    <!-- right aligned items -->
-    <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="/profile.php">Profile</a>
       </li>
