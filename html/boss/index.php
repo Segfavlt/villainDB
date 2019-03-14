@@ -1,5 +1,9 @@
 <?php
 include_once '../resources/php/session.php';
+
+if ($_SESSION['role'] != 'boss') {
+  header('Location: /success.php');
+}
 ?>
 <html lang="en">
 <head>
