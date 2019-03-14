@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-if (!$_SESSION['authenticated']) {
-  header('Location: http://villaindb.com/login');
+include_once 'resources/php/session.php';
 }
 
 ?>
