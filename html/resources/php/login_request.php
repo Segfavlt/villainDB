@@ -32,23 +32,23 @@ if ($auth_result->num_rows > 0) {
         $_SESSION['user'] = $user;
         $_SESSION['authenticated'] = true;
 
-        header('Location: http://villaindb.com/success.php');
+        header('Location: /success.php');
         exit;
       } else {
         $_SESSION['loginerror'] = 1;
         $_SESSION['authenticated'] = false;
-        header('Location: http://villaindb.com/login.php');
+        header('Location: /index.php');
       }
     } else {
       $_SESSION['loginerror'] = 1;
       $_SESSION['authenticated'] = false;
-      header('Location: http://villaindb.com/login.php');
+      header('Location: /index.php');
     }
   }
 } else {
     $_SESSION['loginerror'] = 1;
     $_SESSION['authenticated'] = false;
-    header('Location: http://villaindb.com/login.php');
+    header('Location: /index.php');
 }
 $conn->close();
 

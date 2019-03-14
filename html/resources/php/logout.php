@@ -12,6 +12,6 @@ $conn = new mysqli($db_host, $db_user, $db_pass, $db);
 
     session_destroy();
     var_dump($_SESSION);
-    header('Location: http://villaindb.com/login.php');
+    header('Location: /');
 }
 ?>

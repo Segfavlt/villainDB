@@ -2,6 +2,11 @@
 # Database Creation #
 #####################
 
+drop user if exists 'villainDB';
+
+create user 'villainDB'@'%' identified by 'villaindb';
+
+
 drop database if exists villainDB;
 
 create database villainDB;
@@ -143,3 +148,10 @@ set new.risk = upper(new.risk);
 
 create trigger minion_upper_insert before insert on minion for each row
 set new.grade = upper(new.grade);
+
+
+##############
+# User Grant #
+##############
+
+grant all on villainDB.* to 'villainDB'@'%';
