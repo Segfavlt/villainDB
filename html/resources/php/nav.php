@@ -26,24 +26,28 @@ $v_links = array(
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+    <!-- left aligned items -->
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
+    </ul>
+    <!-- right aligned items -->
+    <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="/profile.php">Profile</a>
       </li>
-      <li class="nav-item dropdown">
+      <li class="nav-item dropdown ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Menu
         </a>
         <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-<?php
-foreach ($globals as $name => $url) {
-  echo "<a class=\"bg-dark text-light dropdown-item\" href=\"$url\">$name</a>";
-}
-?>
+        <?php
+          foreach ($globals as $name => $url) {
+          echo "<a class=\"bg-dark text-light dropdown-item\" href=\"$url\">$name</a>";
+          }
+        ?>
         </div>
       </li>
     </ul>
