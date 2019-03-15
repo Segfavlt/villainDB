@@ -6,5 +6,13 @@ if ($_SESSION['role'] != 'villain') {
 }
 ?>
 
+<html lang="en">
+<head>
+  <title>Villain Panel</title>
+</head>
 
-Hello Master.
+<body class="bg-secondary text-light">
+<?php include "../resources/php/nav.php" ?>
+Hello Master
+</body>
+</html>
