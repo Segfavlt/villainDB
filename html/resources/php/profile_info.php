@@ -59,9 +59,6 @@ if ($_SESSION['role'] == 'minion') {
     echo "<script type='text/javascript'>alert('Could not find user');</script>";
   }
 
-} else if ($_SESSION['role'] == 'villain') {
-
-    echo "<script type='text/javascript'>alert(<span class='text-warning'>We do not track information on you</span>);</script>";
 } else {
     echo "<script type='text/javascript'>alert('Could not find role');</script>";
 }
