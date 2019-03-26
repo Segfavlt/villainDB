@@ -53,7 +53,7 @@ if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
 <?php
 
   if (isset($_SESSION['loginerror'])) {
-    echo "<span class='text-danger'> Failed to authenticate username or password</span>";
+    echo "<span class='text-warning'> Failed to authenticate username or password</span>";
   }
 ?>
 

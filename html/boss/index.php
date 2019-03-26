@@ -12,6 +12,6 @@ if ($_SESSION['role'] != 'boss') {
 
 <body class="bg-secondary text-light">
 <?php include "../resources/php/nav.php" ?>
-Hello Agent
+Hello <?php echo $_SESSION['role']; echo ' '.$_SESSION['user']?>
 </body>
 </html>
