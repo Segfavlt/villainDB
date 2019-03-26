@@ -12,7 +12,7 @@ $basic_info = null;
 $adv_info = null;
 $class = "Minion";
 
-switch($_SESSION['role']) {
+switch($_SESSION['access']) {
   case 'minion':
     $basic_info = minion_pop($mysql);
     $class = set_class($mysql, $basic_info);

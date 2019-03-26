@@ -3,12 +3,12 @@ include "resources/php/session.php";
 include "resources/php/profile_info.php";
 
 
-if ($_SESSION['role'] == 'minion') {
+if ($_SESSION['access'] == 'minion') {
   $rating = $basic_info['grade'];
   $metric = 'Grade';
   $extra = $class;
   $extra_label = "Class";
-} else if ($_SESSION['role'] == 'boss') {
+} else if ($_SESSION['access'] == 'boss') {
   $rating = $basic_info['effectiveness'];
   $metric = 'Effectiveness';
   $extra = $basic_info['name'];

@@ -35,7 +35,7 @@ $v_links = array(
       <li class="nav-item active">
         <a class="nav-link" href="/">Home <span class="sr-only">(home)</span></a>
       </li>
-      <?php if ($_SESSION['role'] != 'villain') {
+      <?php if ($_SESSION['access'] != 'villain') {
       echo '<li class="nav-item">';
         echo '<a class="nav-link" href="/profile.php">Profile</a>';
       echo '</li>';

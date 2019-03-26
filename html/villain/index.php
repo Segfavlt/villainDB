@@ -1,7 +1,7 @@
 <?php
 include "../resources/php/session.php";
 
-if ($_SESSION['role'] != 'villain') {
+if ($_SESSION['access'] != 'villain') {
   header('Location: /success.php');
 }
 ?>

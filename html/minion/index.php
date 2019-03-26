@@ -1,9 +1,10 @@
 <?php
-include "../resources/php/session.php";
+include '/resources/php/session.php';
 
-if ($_SESSION['role'] != 'minion') {
+if ($_SESSION['access'] != 'minion') {
   header('Location: /success.php');
 }
 ?>
+
 
 Hello slave.
