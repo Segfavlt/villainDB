@@ -1,6 +1,6 @@
 <?php
 include "resources/php/session.php";
-include "resources/php/profile_info.php";
+include"resources/php/profile_info.php";
 
 
 if ($_SESSION['access'] == 'minion') {
@@ -15,8 +15,6 @@ if ($_SESSION['access'] == 'minion') {
   $extra_label = "Name";
 }
 ?>
-
-
 
 <html>
 

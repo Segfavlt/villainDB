@@ -12,6 +12,6 @@ if ($_SESSION['access'] != 'boss') {
 
 <body class="bg-secondary text-light">
 <?php include "../resources/php/nav.php" ?>
-Hello <?php echo $_SESSION['access']; echo ' '.$_SESSION['user']?>
+Hello <?php echo $_SESSION['access']; echo ' '.$_SESSION['user'] ?>
 </body>
 </html>
