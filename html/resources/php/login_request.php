@@ -22,7 +22,7 @@ if ($auth_result->num_rows > 0) {
         if ($role_result->num_rows > 0) {
           while ($row2 = $role_result->fetch_assoc()) {
             $role = $row2['role'];
-            $_SESSION['role'] = $role;
+            $_SESSION['access'] = $role;
           }
         }
 
