@@ -11,11 +11,11 @@
 <?php
 $globals = array(
   'Home' => '/',
-  'Profile' => '/profile.php',
   'Logout' => '/resources/php/logout.php'
   );
 
 $b_links = array(
+  'Profile' => '/profile.php',
   'Minions' => '/boss/minions.php',
   'Missons' => '/boss/missions.php',
   'Base'    => '/boss/base.php',
@@ -43,9 +43,9 @@ $v_links = array(
     <ul class="navbar-nav">
       <!-- right aligned items go here-->
       <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only">(home)</span></a>
+        <a class="nav-link" href="/">Home<span class="sr-only">(home)</span></a>
       </li>
-      <?php if ($_SESSION['access'] != 'villain') {
+      <?php if ($_SESSION['access'] == 'boss') {
       echo '<li class="nav-item">';
         echo '<a class="nav-link" href="/profile.php">Profile</a>';
       echo '</li>';
@@ -56,9 +56,25 @@ $v_links = array(
         </a>
         <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
         <?php
-          foreach ($globals as $name => $url) {
-          echo "<a class=\"bg-dark text-light dropdown-item\" href=\"$url\">$name</a>";
+          echo "<a class=\"bg-dark text-light dropdown-item\" href=\"/\">Home</a>";
+          switch($_SESSION['access']) {
+            case 'boss':
+              echo '<div class="dropdown-divider"></div>';
+              foreach ($b_links as $name => $url) {
+                echo "<a class=\"bg-dark text-light dropdown-item\" href=\"$url\">$name</a>";
+              }
+              break;
+            case 'villain':
+              echo '<div class="dropdown-divider"></div>';
+              foreach ($v_links as $name => $url) {
+                echo "<a class=\"bg-dark text-light dropdown-item\" href=\"$url\">$name</a>";
+              }
+              break;
+            default:
+              break;
           }
+          echo '<div class="dropdown-divider"></div>';
+          echo "<a class=\"bg-dark text-light dropdown-item\" href=\"/resources/php/logout.php\">Logout</a>";
         ?>
         </div>
       </li>
