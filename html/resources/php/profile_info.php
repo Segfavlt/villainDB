@@ -1,6 +1,6 @@
 <?php
-include("session.php");
-include("connect.php");
+include_once ("session.php");
+include ("connect.php");
 
 $mysql = new mysqli($db_host, $db_user, $db_pass, $db);
 if($mysql ->connect_errno) {
