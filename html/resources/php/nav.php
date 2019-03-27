@@ -29,7 +29,6 @@ $v_links = array(
   'Missions' => '/boss/missions.php',
   'Threats' => '/villain/threats.php'
 );
-
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
   <a class="navbar-brand" href="/"><img src="/resources/svg/villainDB.svg" alt="VillainDB" /></a>

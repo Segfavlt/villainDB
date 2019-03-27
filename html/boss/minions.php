@@ -11,6 +11,20 @@ include "../resources/php/session.php";
 <?php include "../resources/php/nav.php" ?>
 <br>
 <div class="container">
+
+<?php // alert starts here
+if (isset($_SESSION['message'])): ?>
+<div class="alert alert-<?=$_SESSION['msg_type']?> alert-dismissible fade show">
+<?php echo $_SESSION['message']; 
+      unset($_SESSION['message']);
+?>
+<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+</button>
+</div>
+<?php endif // alert ends here
+?>
+
 <table class="table table-dark">
   <thead>
     <tr>
