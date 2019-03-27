@@ -1,13 +1,19 @@
 <?php
-include_once ("session.php");
+include ("session.php");
 include ("connect.php");
-
+$user = $_SESSION['user'];
 $mysql = new mysqli($db_host, $db_user, $db_pass, $db);
 if($mysql ->connect_errno) {
     echo 'Could not connect: ' . $mysql->connect_error;
 }
-
-$query = "select minion.id, minion.grade, minion.base, advanced.class from minion left join advanced on minion.class=advanced.rank order by id";
+switch($_SESSION['access']) {
+  case 'villain':
+    $query = "select minion.id, minion.grade, minion.base, advanced.class from minion left join advanced on minion.class=advanced.rank order by id";
+    break;
+  case 'boss':
+    $query = "select minion.id, minion.grade, minion.base, advanced.class from minion left join advanced on minion.class=advanced.rank where minion.base in (select base from boss where id='$user') order by id";
+    break;
+}
 $result = $mysql -> query($query);
 
 while ($row = $result->fetch_assoc()):
