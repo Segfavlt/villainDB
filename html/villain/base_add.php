@@ -1,15 +1,4 @@
-<?php
-include "../resources/php/session.php";
-?>
-
-<html lang="en">
-<head>
-  <title>Villain Panel - Add Base</title>
-</head>
-
-<body class="bg-secondary text-light">
 <?php require_once '../resources/php/base_edit.php'; ?>
-<?php include "../resources/php/nav.php" ?>
 <br>
 <div class="container">
 <form action="../resources/php/base_edit.php" method="POST">
@@ -22,5 +11,3 @@ include "../resources/php/session.php";
   </div>
 </form>
 </div>
-</body>
-</html>
