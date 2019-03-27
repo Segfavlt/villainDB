@@ -20,6 +20,8 @@ if (isset($_GET['delete'])){
     } else {
       echo("Error no: " . mysqli_errno($mysql) ."Error description: " . mysqli_error($mysql));
     }
+  } else {
+    header("location: ../../villain/base.php");
   }
 
   mysqli_close($mysql);

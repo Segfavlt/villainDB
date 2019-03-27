@@ -9,12 +9,13 @@ include "../resources/php/session.php";
 
 <body class="bg-secondary text-light">
 <?php include "../resources/php/nav.php" ?>
-
-<h3>Bases</h3>
-
+<br>
 <div class="container">
-<table class="table">
+<table class="table table-dark">
   <thead>
+    <tr>
+      <th colspan="4" scope="col" class="text-center"><h3>Bases</h3></th>
+    </tr>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Region</th>
