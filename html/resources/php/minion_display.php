@@ -7,7 +7,7 @@ if($mysql ->connect_errno) {
     echo 'Could not connect: ' . $mysql->connect_error;
 }
 
-$query = "select * from base order by id";
+$query = "select * from minion order by id";
 $result = $mysql -> query($query);
 
 while ($row = $result->fetch_assoc()):
@@ -15,7 +15,9 @@ while ($row = $result->fetch_assoc()):
 
 <tr>
   <th scope="row"> <?php echo $row['id']; ?> </th>
-  <td> <?php echo $row['region']; ?> </td>
+  <td> <?php echo $row['grade']; ?> </td>
+  <td> <?php echo $row['base']; ?> </td>
+  <td> <?php echo $row['class']; ?> </td>
   <td class="text-right">
     <a href="../resources/php/minion_edit.php?delete=<?php echo $row['id']; ?> "
     class="btn btn-danger">Delete</a>

@@ -14,19 +14,18 @@ include "../resources/php/session.php";
 <table class="table table-dark">
   <thead>
     <tr>
-      <th colspan="3" scope="col" class="text-center"><h3>Bases</h3></th>
-    </tr>
-    <tr>
-      <th colspan="3" scope="col" class="text-right"><a href="../resources/php/minion_add.php" class="btn btn-success">Add</a></th>
+      <th colspan="5" scope="col" class="text-center"><h3>Minions</h3></th>
     </tr>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">Region</th>
+      <th scope="col">Grade</th>
+      <th scope="col">Base</th>
+      <th scope="col">Class</th>
       <th colspan="2" scope="col"></th>
     </tr>
   </thead>
   <tbody>
-    <?php include "../resources/php/base_display.php"; ?>
+    <?php include "../resources/php/minion_display.php"; ?>
   </tbody>
 </table>
 </div>
