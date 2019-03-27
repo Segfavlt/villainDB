@@ -75,7 +75,7 @@ if (isset($_SESSION['message'])): ?>
       </th>
     </tr>
     <tr>
-      <th scope="col"><a class="ml-2" href="base.php?order_by=id">#</a></th>
+      <th scope="col"><a class="ml-2" href="base.php?order_by=id">Base ID</a></th>
       <th scope="col"><a href="base.php?order_by=region">Region</a></th>
       <th colspan="2" scope="col" class="text-right">
       <button type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#exampleModal">
