@@ -17,7 +17,7 @@ $globals = array(
 $b_links = array(
   'Profile' => '/profile.php',
   'Minions' => '/boss/minions.php',
-  'Missons' => '/boss/missions.php',
+  'Missions' => '/boss/missions.php',
   'Base'    => '/boss/base.php',
   'Threats' => '/boss/threats.php'
 );
@@ -25,7 +25,7 @@ $b_links = array(
 $v_links = array(
   'Bases'   => '/villain/base.php',
   'Minions' => '/boss/minions.php',
-  'Missons' => '/boss/missions.php',
+  'Missions' => '/boss/missions.php',
   'Threats' => '/villain/threats.php'
 );
 
