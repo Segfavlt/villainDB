@@ -59,7 +59,7 @@ switch ($class) {
   <div class="container">
       <div class="row mt-5">
 
-        <div class="col-3"></div>
+        <div class="col"></div>
 
         <div class="container">
         <!-- Nav tab/pill -->
@@ -117,6 +117,26 @@ switch ($class) {
                                 </div>
                                 <input type="text" readonly="true" class="form-control" value="<?php echo $basic_info['base'];?>" aria-label="base" aria-describedby="basic-addon4">
                             </div>
+
+                            <form action="resources/php/update_pass.php" method="post">
+                              <div class="form-group">
+                                <label for="pwd1">Password</label>
+                                <input type="password" class="form-control" id="pwd1" name="pwd1" placeholder="Password">
+                              </div>
+                              <div class="form-group">
+                                <label for="pwd2">Verify Password</label>
+                                <input type="password" class="form-control" id="pwd2" name="pwd2" placeholder="Password">
+                              </div>
+                              <?php
+                                if ($_SESSION['passdiff']) {
+                                  echo "<span class='text-warning'>Passwords do not match</span>";
+                                }
+                              ?>
+                              <button class="btn btn-sm btn-danger col"
+                                type="submit">
+                                Login
+                              </button>
+                          </form>
                         </div>
                     </div>
                 </div>
@@ -130,25 +150,27 @@ switch ($class) {
 
                             <div class="input-group input-group-sm mt-3 mb-3">
                                 <div class="input-group-prepend">
-                                    <span class=" input-group-text" id="basic-addon3">
+                                    <span class=" input-group-text" id="basic-addon5">
                                         <?php echo $skill_label;?>
                                     </span>
                                 </div>
-                                <input type="text" readonly="true" class="form-control" value="<?php echo $skill;?>" aria-label="grade" aria-describedby="basic-addon3">
+                                <input type="text" readonly="true" class="form-control" value="<?php echo $skill;?>" aria-label="grade" aria-describedby="basic-addon5">
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
                                 <div class="input-group-prepend">
-                                    <span class=" input-group-text" id="basic-addon4">
+                                    <span class=" input-group-text" id="basic-addon6">
                                         <?php echo $tool_label;?>
                                     </span>
                                 </div>
-                                <input type="text" readonly="true" class="form-control" value="<?php echo $tool;?>" aria-label="base" aria-describedby="basic-addon4">
+                                <input type="text" readonly="true" class="form-control" value="<?php echo $tool;?>" aria-label="base" aria-describedby="basic-addon6">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+          <div class="bg-dark col-4 rounded">
+          </div>
         </div>
     <div class='col'></div>
   </div>
