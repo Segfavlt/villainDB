@@ -17,10 +17,9 @@ while ($row = $result->fetch_assoc()):
   <th scope="row"> <?php echo $row['id']; ?> </th>
   <td> <?php echo $row['region']; ?> </td>
   <td class="text-right">
-    <a href="../resources/php/minion_edit.php?delete=<?php echo $row['id']; ?> "
-    class="btn btn-danger">Delete</a>
+    <a href="../resources/php/base_edit.php?delete=<?php echo $row['id']; ?> "
+    class="btn btn-danger"><i class="fas fa-trash"></i></a>
   </td>
 </tr>
-
 
 <?php endwhile; ?>

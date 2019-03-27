@@ -17,7 +17,7 @@ include "../resources/php/session.php";
       <th colspan="3" scope="col" class="text-center"><h3>Bases</h3></th>
     </tr>
     <tr>
-      <th colspan="3" scope="col" class="text-right"><a href="../resources/php/minion_add.php" class="btn btn-success">Add</a></th>
+      <th colspan="3" scope="col" class="text-right"><a href="base_add.php" class="btn btn-success"><i class="fas fa-plus"></i></a></th>
     </tr>
     <tr>
       <th scope="col">#</th>

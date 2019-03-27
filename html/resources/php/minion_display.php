@@ -20,7 +20,7 @@ while ($row = $result->fetch_assoc()):
   <td> <?php echo $row['class']; ?> </td>
   <td class="text-right">
     <a href="../resources/php/minion_edit.php?delete=<?php echo $row['id']; ?> "
-    class="btn btn-danger">Delete</a>
+    class="btn btn-danger"><i class="fas fa-trash"></i></a>
   </td>
 </tr>
 
