@@ -14,12 +14,22 @@ $class = "Minion";
 
 switch($_SESSION['access']) {
   case 'minion':
-    $basic_info = minion_pop($mysql);
-    $class = set_class($mysql, $basic_info);
-    $adv_info = adv_pop($mysql, $id);
+    try {
+      $mysql->begin_transaction(MYSQLI_TRANS_START_READ_ONLY);
+      $basic_info = minion_pop($mysql);
+      $class = set_class($mysql, $basic_info);
+      $adv_info = adv_pop($mysql, $id, $class);
+      $mysql->commit();
+    } catch (exception $e) {
+      $mysql->rollback();}
     break;
   case 'boss':
-    $basic_info = boss_pop($mysql);
+    try {
+      $mysql->begin_transaction(MYSQLI_TRANS_START_READ_ONLY);
+      $basic_info = boss_pop($mysql);
+      $mysql->commit();
+    } catch (exception $e) {
+      $mysql->rollback();}
     break;
   default:
     echo "<script type='text/javascript'>alert('Could not find role');</script>";
@@ -43,15 +53,15 @@ function set_class($conn, $info) {
   }
 }
 
-function adv_pop($conn, $ident) {
+function adv_pop($conn, $ident, $classval) {
   switch ($classval) {
-  case "1":
-    $adv_query = "select * from spy where id='$ident';";
+  case "Spy":
+    $adv_query = "select * from spy where id='$ident'";
     break;
-  case "2":
+  case "Muscle":
     $adv_query = "select * from muscle where id='$ident'";
     break;
-  case "3":
+  case "Tech":
     $adv_query = "select * from tech where id='$ident'";
     break;
   default:
@@ -59,11 +69,12 @@ function adv_pop($conn, $ident) {
     break;
   }
 
-  echo "<script type='text/javascript'>alert('".$class."');</script>";
   $adv_result = $conn -> query($adv_query);
   if ($adv_result->num_rows > 0) {
     $row = $adv_result->fetch_assoc();
     $adv_info = $row;
+
+    $sub = $adv_info['subterfuge'];
 
     return $adv_info;
   } else {
