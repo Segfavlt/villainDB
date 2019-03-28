@@ -81,11 +81,11 @@ deletion should be performed.
 8. [1 Marks] Update Operation: Provide an interface for the user to specify some input
 for the update operation.
 
-  * Shown on site page:
-  * Query Used in Project:
-  * Used in php file:
-  * On line number:
-  * Users restriction:
+  * Shown on site page: profile.php
+  * Query Used in Project: "update users set passwd='$hash' where id='$id'";
+  * Used in php file: update_pass.php
+  * On line number: 24
+  * Users restriction: none
 
 
 9. [3 Bonus Marks] Extra features: Create unique features that your application
