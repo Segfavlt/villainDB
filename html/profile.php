@@ -21,19 +21,16 @@ switch ($_SESSION['access']){
 
 switch ($class) {
   case 'Spy':
-    $skill = $adv_info['subterfuge'];
     $skill_label = 'Subterfuge Level';
     $tool = $adv_info['gadget'];
     $tool_label = 'Gadget';
     break;
   case 'Tech':
-    $skill = $adv_info['repair_rating'];
     $skill_label = 'Repair Rating';
     $tool = $adv_info['tool'];
     $tool_label = 'Tool';
     break;
   case 'Muscle':
-    $skill = $adv_info['att_power'];
     $skill_label = 'Strength';
     $tool = $adv_info['weapon'];
     $tool_label = 'Weapon';
@@ -155,7 +152,8 @@ switch ($class) {
                                       <?php echo $skill_label;?>
                                   </span>
                               </div>
-                              <input type="text" readonly="true" class="form-control" value="<?php echo $skill;?>" aria-label="grade" aria-describedby="basic-addon5">
+                              <input type="text" readonly="true" class="form-control"
+value="<?php echo $adv_info['ability_rating'];?>" aria-label="grade" aria-describedby="basic-addon5">
                           </div>
 
                           <div class="input-group input-group-sm mb-3">
