@@ -60,17 +60,14 @@ switch ($class) {
 
 <?php include "resources/php/nav.php";?>
 <body class="bg-secondary text-light">
-  <div class="container">
-      <div class="row mt-5">
-
-        <div class="col"></div>
-
-        <div class="container">
+  <div class="row mt-5">
+    <div class="col"></div>
+      <div class="container">
         <!-- Nav tab/pill -->
         <ul class="nav nav-pills" id="pills-tab" role="tablist">
-            <li class="nav-item bg-dark">
-              <a class="nav-link active" id="pills-basic-tab" data-toggle="pill" href="#pills-basic" role="tab" aria-controls="pills-basic" aria-selected="true">Basic Profile<a>
-            </li>
+          <li class="nav-item bg-dark">
+            <a class="nav-link active" id="pills-basic-tab" data-toggle="pill" href="#pills-basic" role="tab" aria-controls="pills-basic" aria-selected="true">Basic Profile<a>
+          </li>
 <?php if($_SESSION['access'] == 'minion' && $class != 'Minion') {
   echo '<li class="nav-item bg-dark">';
   echo '<a class="nav-link" id="pills-advanced-tab" data-toggle="pill" href="#pills-advanced" role="tab" aria-controls="pills-advanced" aria-selected="false">Advanced Class<a>';
@@ -114,69 +111,68 @@ switch ($class) {
                             </div>
 
                             <div class="input-group input-group-sm mb-3">
-                                <div class="input-group-prepend">
-                                <span class=" input-group-text" id="basic-addon4">
-                                    Base ID
-                                </span>
-                                </div>
-                                <input type="text" readonly="true" class="form-control" value="<?php echo $basic_info['base'];?>" aria-label="base" aria-describedby="basic-addon4">
+                              <div class="input-group-prepend">
+                              <span class=" input-group-text" id="basic-addon4">
+                                  Base ID
+                              </span>
                             </div>
+                            <input type="text" readonly="true" class="form-control" value="<?php echo $basic_info['base'];?>" aria-label="base" aria-describedby="basic-addon4">
+                          </div>
 
-                            <form action="resources/php/update_pass.php" method="post">
-                              <div class="form-group">
-                                <label for="pwd1">Password</label>
-                                <input type="password" class="form-control" id="pwd1" name="pwd1" placeholder="Password">
-                              </div>
-                              <div class="form-group">
-                                <label for="pwd2">Verify Password</label>
-                                <input type="password" class="form-control" id="pwd2" name="pwd2" placeholder="Password">
-                              </div>
-                              <?php
-                                if ($_SESSION['passdiff']) {
-                                  echo "<span class='text-warning'>Passwords do not match</span>";
-                                }
-                              ?>
-                              <button class="btn btn-sm btn-danger col"
-                                type="submit">
-                                Login
-                              </button>
-                          </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="tab-pane fade" id="pills-advanced" role="tabpanel" aria-labelledby="pills-advanced-tab">
-                <div class="panel-body">
-                    <div class="row">
-
-                        <div class="bg-dark col-4 rounded">
-
-                            <div class="input-group input-group-sm mt-3 mb-3">
-                                <div class="input-group-prepend">
-                                    <span class=" input-group-text" id="basic-addon5">
-                                        <?php echo $skill_label;?>
-                                    </span>
-                                </div>
-                                <input type="text" readonly="true" class="form-control" value="<?php echo $skill;?>" aria-label="grade" aria-describedby="basic-addon5">
+                          <form action="resources/php/update_pass.php" method="post">
+                            <div class="form-group">
+                              <label for="pwd1">Password</label>
+                              <input type="password" class="form-control" id="pwd1" name="pwd1" placeholder="Password">
                             </div>
-
-                            <div class="input-group input-group-sm mb-3">
-                                <div class="input-group-prepend">
-                                    <span class=" input-group-text" id="basic-addon6">
-                                        <?php echo $tool_label;?>
-                                    </span>
-                                </div>
-                                <input type="text" readonly="true" class="form-control" value="<?php echo $tool;?>" aria-label="base" aria-describedby="basic-addon6">
+                            <div class="form-group">
+                              <label for="pwd2">Verify Password</label>
+                              <input type="password" class="form-control" id="pwd2" name="pwd2" placeholder="Password">
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          <div class="bg-dark col-4 rounded">
+                            <?php
+                              if ($_SESSION['passdiff']) {
+                                echo "<span class='text-warning'>Passwords do not match</span>";
+                              }
+                            ?>
+                            <button class="btn btn-sm btn-danger col"
+                              type="submit">
+                              Login
+                            </button>
+                        </form>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-    <div class='col'></div>
-  </div>
+
+          <div class="tab-pane fade" id="pills-advanced" role="tabpanel" aria-labelledby="pills-advanced-tab">
+              <div class="panel-body">
+                  <div class="row">
+
+                      <div class="bg-dark col-4 rounded">
+
+                          <div class="input-group input-group-sm mt-3 mb-3">
+                              <div class="input-group-prepend">
+                                  <span class=" input-group-text" id="basic-addon5">
+                                      <?php echo $skill_label;?>
+                                  </span>
+                              </div>
+                              <input type="text" readonly="true" class="form-control" value="<?php echo $skill;?>" aria-label="grade" aria-describedby="basic-addon5">
+                          </div>
+
+                          <div class="input-group input-group-sm mb-3">
+                              <div class="input-group-prepend">
+                                  <span class=" input-group-text" id="basic-addon6">
+                                      <?php echo $tool_label;?>
+                                  </span>
+                              </div>
+                              <input type="text" readonly="true" class="form-control" value="<?php echo $tool;?>" aria-label="base" aria-describedby="basic-addon6">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        <div class="bg-dark col-4 rounded">
+      </div>
+    </div>
+  <div class='col'></div>
 </body>
 </html>
