@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'connect.php';
-error_reporting(E_ALL);
 $user = trim($_POST['user']);
 $pass = trim($_POST['pwd']);
 
