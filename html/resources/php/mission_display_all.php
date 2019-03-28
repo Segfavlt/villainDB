@@ -4,8 +4,8 @@ include 'connect.php';
 $ident = $_SESSION['user'];
 
 
-$target_var="";
-$description_var="";
+$target_var=", mission.target";
+$description_var=", mission_description.description";
 $target_col='<th scope="col">Target</th>';
 $description_col='';
 
@@ -32,6 +32,8 @@ try {
 <tr>
       <th scope="col">Type</th>
       <th scope="col">Boss</th>
+      <th scope="col">Target</th>
+      <th scope="col">Description</th>
     </tr>
   </thead>
 
@@ -42,7 +44,10 @@ try {
 <tr>
   <th scope="row"> <?php echo ucfirst($row['name']); ?> </th>
   <td> <?php echo $row['bname']; ?> </td>
+  <td> <?php echo ucfirst($row['target']); ?> </td>
+  <td> <?php echo ucfirst($row['description']); ?> </td>
 </tr>
+
 
 <?php endwhile;
 } catch (exception $e) {
@@ -50,3 +55,5 @@ try {
   $conn->close();
 }
 ?>
+
+</tbody>

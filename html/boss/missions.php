@@ -35,24 +35,32 @@ if (isset($_SESSION['message'])): ?>
     </th>
     </tr>
     <tr>
-    <tr>
-      <th scope="col">Type</th>
-      <th scope="col">Boss</th>
-      <?php $target_col ?>
-      <th scope="col">Description</th>
-      <th colspan="2" scope="col"></th>
-    </tr>
-  </thead>
-</tbody>
-
-    <?php
-    	if(isset($_POST['target']) && $_POST['target'] == 'Yes')
-        {
-            echo "target checked";
-        }
-    $values_checked="";
-    include "../resources/php/mission_display.php"; ?>
-  </tbody>
+    <?php 
+    $include_var="../resources/php/mission_display.php";
+    // projection check // which columns should be shown
+      if (isset($_GET['showvals'])) {
+        switch ($_GET['showvals']) {
+          case "both":
+            $include_var = "../resources/php/mission_display_all.php";
+            break;
+          case "none":
+            $include_var = "../resources/php/mission_display.php";
+            break;
+          case "target":
+            $include_var = "../resources/php/mission_display_target.php";
+            break;
+          case "description":
+            $include_var = "../resources/php/mission_display_description.php";
+            break;
+          default:
+            return null;
+            break;
+          }
+      }
+      include $include_var;
+      // endif // alert ends here
+      ?>
+    <?php  ?>
 </table>
 </div>
 
