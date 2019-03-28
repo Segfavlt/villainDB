@@ -373,24 +373,131 @@ insert into region values(
 # Threat #
 ###########
 
+# African Threats
 insert into threat(risk, name, region) values(
-	'A',
+	'S',
 	'Black Panther',
 	'Africa'
 );
 
 insert into threat(risk, name, region) values(
+	'C',
+	'Lebanese Army',
+	'Africa'
+);
+
+insert into threat(risk, name, region) values(
+	'A',
+	'Israeli Army',
+	'Africa'
+);
+
+insert into threat(risk, name, region) values(
+	'C',
+	'Egyptian Air Force',
+	'Africa'
+);
+
+insert into threat(risk, name, region) values(
+	'D',
+	'ISIS',
+	'Africa'
+);
+
+# Asian Threats
+insert into threat(risk, name, region) values(
 	'S',
-	'Russian President',
+	'Gundam',
+	'Asia'
+);
+
+insert into threat(risk, name, region) values(
+	'A',
+	'Chinese Army',
+	'Asia'
+);
+
+insert into threat(risk, name, region) values(
+	'B',
+	'Japanese Self-Defence Force',
+	'Asia'
+);
+
+insert into threat(risk, name, region) values(
+	'C',
+	'North Korean Army',
+	'Asia'
+);
+
+insert into threat(risk, name, region) values(
+	'A',
+	'USN Pacific Fleet',
+	'Asia'
+);
+
+# European Threats
+insert into threat(risk, name, region) values(
+	'S',
+	'007',
+	'Europe'
+);
+
+insert into threat(risk, name, region) values(
+	'A',
+	'NATO',
+	'Europe'
+);
+
+insert into threat(risk, name, region) values(
+	'A',
+	'Russian Army',
 	'Europe'
 );
 
 insert into threat(risk, name, region) values(
 	'C',
+	'Interpol',
+	'Europe'
+);
+
+insert into threat(risk, name, region) values(
+	'A',
+	'MI6',
+	'Europe'
+);
+
+# North American Threats
+insert into threat(risk, name, region) values(
+	'A',
 	'Captain America',
 	'North America'
 );
 
+insert into threat(risk, name, region) values(
+	'A',
+	'CIA',
+	'North America'
+);
+
+insert into threat(risk, name, region) values(
+	'A',
+	'FBI',
+	'North America'
+);
+
+insert into threat(risk, name, region) values(
+	'C',
+	'RCMP',
+	'North America'
+);
+
+insert into threat(risk, name, region) values(
+	'C',
+	'CSIS',
+	'North America'
+);
+
+# South American Threats
 insert into threat(risk, name, region) values(
 	'D',
 	'Nacho Libre',
@@ -398,10 +505,29 @@ insert into threat(risk, name, region) values(
 );
 
 insert into threat(risk, name, region) values(
-	'A',
-	'Gundam',
-	'Asia'
+	'B',
+	'Mexican Cartel',
+	'South America'
 );
+
+insert into threat(risk, name, region) values(
+	'B',
+	'Columbian Cartel',
+	'South America'
+);
+
+insert into threat(risk, name, region) values(
+	'D',
+	'Local Police',
+	'South America'
+);
+
+insert into threat(risk, name, region) values(
+	'D',
+	'Brazillian Army',
+	'South America'
+);
+
 
 ########
 # Base #
@@ -831,7 +957,7 @@ insert into hero values(
 
 insert into hero values(
 	2,
-	'Vladimir Putin'
+	'James Bond'
 );
 
 insert into hero values(
