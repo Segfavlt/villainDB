@@ -11,7 +11,6 @@
 <link rel="stylesheet" href="../css/custom.css">
 
 <?php
-session_start();
 $globals = array(
   'Home' => '/',
   'Logout' => '/resources/php/logout.php'
