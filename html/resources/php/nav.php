@@ -21,11 +21,11 @@ $b_links = array(
   'Profile' => '/profile.php',
   'Minions' => '/boss/minions.php',
   'Missions' => '/boss/missions.php',
-  'Base'    => '/boss/base.php',
   'Threats' => '/boss/threats.php'
 );
 
 $v_links = array(
+  'Profile' => '/profile.php',
   'Bases'   => '/villain/base.php',
   'Minions' => '/boss/minions.php',
   'Missions' => '/boss/missions.php',
@@ -47,11 +47,9 @@ $v_links = array(
       <li class="nav-item active">
         <a class="nav-link" href="/">Home<span class="sr-only">(home)</span></a>
       </li>
-      <?php if ($_SESSION['access'] == 'boss') {
-      echo '<li class="nav-item">';
-        echo '<a class="nav-link" href="/profile.php">Profile</a>';
-      echo '</li>';
-} ?>
+      <li class="nav-item">
+        <a class="nav-link" href="/profile.php">Profile</a>
+      </li>
       <li class="nav-item dropdown ">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          Menu
