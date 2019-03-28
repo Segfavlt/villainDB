@@ -7,6 +7,8 @@
 <?php
 if ($_SESSION['access'] != 'villain') {
   header('Location: /success.php');
+} else {
+  header('Location: /boss/threats.php');
 }
 ?>
 

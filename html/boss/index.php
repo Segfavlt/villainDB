@@ -9,9 +9,9 @@
 <?php
 if ($_SESSION['access'] != 'boss') {
   header('Location: /success.php');
+} else {
+  header('Location: /boss/minions.php');
 }
 ?>
-
-Hello <?php echo $_SESSION['access']; echo ' '.$_SESSION['user'] ?>
 </body>
 </html>
