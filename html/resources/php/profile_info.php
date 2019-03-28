@@ -75,7 +75,7 @@ function adv_pop($conn, $ident, $classval) {
     $row = $adv_result->fetch_assoc();
     $adv_info = $row;
 
-    $sub = $adv_info['subterfuge'];
+    //$sub = $adv_info['subterfuge'];
 
     return $adv_info;
   } else {
