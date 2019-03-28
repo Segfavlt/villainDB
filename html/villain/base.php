@@ -35,46 +35,6 @@ if (isset($_SESSION['message'])): ?>
     <tr>
       <th colspan="3" scope="col" class="text-center"><h3>Bases</h3></th>
     </tr>
-    <tr>
-      <th colspan="3" scope="col">
-      <div class="form-row">
-        <label class="ml-3">
-            Filter:
-        </label>
-        <div class="form-check ml-3">
-          <input class="form-check-input" type="checkbox" id="gridCheck1">
-          <label class="form-check-label" for="gridCheck1">
-            North America
-          </label>
-        </div>
-        <div class="form-check ml-3">
-          <input class="form-check-input" type="checkbox" id="gridCheck2">
-          <label class="form-check-label" for="gridCheck2">
-            South America
-          </label>
-        </div>
-        <div class="form-check ml-3">
-          <input class="form-check-input" type="checkbox" id="gridCheck3">
-          <label class="form-check-label" for="gridCheck3">
-            Africa
-          </label>
-        </div>
-        <div class="form-check ml-3">
-          <input class="form-check-input" type="checkbox" id="gridCheck4">
-          <label class="form-check-label" for="gridCheck4">
-            Europe
-          </label>
-        </div>
-        <div class="form-check ml-3">
-          <input class="form-check-input" type="checkbox" id="gridCheck5">
-          <label class="form-check-label" for="gridCheck5">
-            Asia
-          </label>
-        </div>
-      </div>
-      </th>
-    </tr>
-    <tr>
       <th scope="col"><a class="ml-2" href="base.php?order_by=id">Base ID</a></th>
       <th scope="col"><a href="base.php?order_by=region">Region</a></th>
       <th colspan="2" scope="col" class="text-right">
