@@ -9,7 +9,8 @@ switch ($_SESSION['access']) {
     $mquery = "select * from threat order by id";
     break;
   case 'boss':
-    $mquery = "select * from threat left join base on threat.region=base.region where base.boss='$ident'";
+    $mquery = "select threat.name, threat.id, threat.risk, threat.region from threat left join base on threat.region=base.region left join boss on boss.base=base.id where boss.id='$ident'";
+
     break;
 }
 
@@ -27,9 +28,9 @@ while ($row = $result->fetch_assoc()):
 ?>
 
 <tr>
-  <th scope="row"> <?php echo $row['id']; ?> </th>
-  <td> <?php echo $row['risk']; ?> </td>
-  <td> <?php echo ucfirst($row['name']); ?> </td>
+  <th scope="row"> <?php echo $row['name']; ?> </th>
+  <td> <?php echo $row['id']; ?> </td>
+  <td> <?php echo ucfirst($row['risk']); ?> </td>
   <td> <?php echo $row['region']; ?> </td>
 </tr>
 

@@ -31,9 +31,9 @@ if (isset($_SESSION['message'])): ?>
       <th colspan="5" scope="col" class="text-center"><h3>Threats</h3></th>
     </tr>
     <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Threat Level</th>
       <th scope="col">Name</th>
+      <th scope="col">ID</th>
+      <th scope="col">Risk Level</th>
       <th scope="col">Region</th>
       <th colspan="2" scope="col"></th>
     </tr>
