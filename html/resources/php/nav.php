@@ -28,6 +28,7 @@ $b_links = array(
 $v_links = array(
   'Profile' => '/profile.php',
   'Bases'   => '/villain/base.php',
+  'Bosses'   => '/villain/boss.php',
   'Minions' => '/boss/minions.php',
   'Missions' => '/boss/missions.php',
   'Threats' => '/boss/threats.php'
