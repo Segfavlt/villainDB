@@ -55,6 +55,12 @@ aggregation (min, max, average, or count are all fine).
   * On line number: 9
   * Users restriction: villain,boss
 
+  * Shown on site page: boss.php
+  * Query Used in Project: "select average(\*) as avg from boss where id <>
+    $ident"
+  * Used in php file: avg_boss_rating.php
+  * On line number: 9
+  * Users restriction: villain
 
 6. [1 Mark] Nested aggregation with group-by: Pick one query that finds some
 aggregated value for each group (e.g. the average number of items purchased per
