@@ -157,8 +157,7 @@ if (isset($_SESSION['message'])): ?>
                 }
             );
           } else {
-            $("#filter-warning").alert('close');
-            console.log("bad");
+            alert('Not a valid grade');
           }
       });
 
