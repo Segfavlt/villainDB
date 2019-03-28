@@ -30,7 +30,7 @@ $v_links = array(
   'Bases'   => '/villain/base.php',
   'Minions' => '/boss/minions.php',
   'Missions' => '/boss/missions.php',
-  'Threats' => '/villain/threats.php'
+  'Threats' => '/boss/threats.php'
 );
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-light">
