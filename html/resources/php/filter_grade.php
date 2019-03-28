@@ -35,10 +35,6 @@ try{
     if ($ansString != '') {
       echo $ansString;
     }
-    else {
-      $_SESSION['msg_type'] = "warning";
-      $_SESSION['message'] = "Not a valid Grade";
-    }
 
 } catch (exception $e) {
   $conn->rollback();

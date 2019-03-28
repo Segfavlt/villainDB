@@ -17,11 +17,11 @@ SELECT Field_01
 FROM Table_01
 WHERE Field_02 >= 0
 
-  * Shown on site page:
-  * Query Used in Project:
-  * Used in php file:
-  * On line number:
-  * Users restriction:
+  * Shown on site page: Minion
+  * Query Used in Project: select id from minion where grade="$grade";
+  * Used in php file: filter_grade.php
+  * On line number: 14
+  * Users restriction: boss, villain
 
 
 3. [1 Mark] Join query: Pick one query of this category, which joins at least two tables and
@@ -49,11 +49,11 @@ the user to choose this query (e.g. find all the customers who bought all the it
 5. [2 Mark] Aggregation query: Pick two queries that require the use of distinct
 aggregation (min, max, average, or count are all fine).
 
-  * Shown on site page:
-  * Query Used in Project:
-  * Used in php file:
-  * On line number:
-  * Users restriction:
+  * Shown on site page: minions.php
+  * Query Used in Project: "select count(\*) as count from minions"
+  * Used in php file: minion_count.php
+  * On line number: 9
+  * Users restriction: villain,boss
 
 
 6. [1 Mark] Nested aggregation with group-by: Pick one query that finds some
