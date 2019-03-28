@@ -125,9 +125,10 @@ switch ($class) {
                                 <input type="password" class="form-control" id="pwd2" name="pwd2" placeholder="Password">
                               </div>
                               <?php
+                              if (isset($_SESSION['passdiff'])){
                                 if ($_SESSION['passdiff']) {
                                   echo "<span class='text-warning'>Passwords do not match</span>";
-                                }
+                                }}
                               ?>
                               <button class="btn btn-sm btn-danger col"
                                 type="submit">
