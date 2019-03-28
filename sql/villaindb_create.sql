@@ -162,3 +162,13 @@ set new.grade = upper(new.grade);
 ##############
 
 grant all on villainDB.* to 'villainDB'@'localhost';
+
+
+#########
+# Views #
+#########
+
+drop view if exists spymuscletech;
+drop view if exists allminions;
+create view spymuscletech as select id, ability_rating from spy union select id, ability_rating from tech union select id, ability_rating from muscle;
+create view allminions as select minion.id, minion.class, spymuscletech.ability_rating from minion, spymuscletech where minion.id=spymuscletech.id;
