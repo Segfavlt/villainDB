@@ -49,11 +49,11 @@ the user to choose this query (e.g. find all the customers who bought all the it
 5. [2 Mark] Aggregation query: Pick two queries that require the use of distinct
 aggregation (min, max, average, or count are all fine).
 
-  * Shown on site page:
-  * Query Used in Project:
-  * Used in php file:
-  * On line number:
-  * Users restriction:
+  * Shown on site page: minions.php
+  * Query Used in Project: "select count(\*) as count from minions"
+  * Used in php file: minion_count.php
+  * On line number: 9
+  * Users restriction: villain,boss
 
 
 6. [1 Mark] Nested aggregation with group-by: Pick one query that finds some
