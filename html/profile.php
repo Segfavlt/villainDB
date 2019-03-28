@@ -132,7 +132,7 @@ switch ($class) {
                               ?>
                               <button class="btn btn-sm btn-danger col"
                                 type="submit">
-                                Login
+                                Change Password
                               </button>
                           </form>
                         </div>
