@@ -28,20 +28,69 @@ if (isset($_SESSION['message'])): ?>
 <table class="table table-dark">
   <thead>
     <tr>
-      <th colspan="5" scope="col" class="text-center"><h3>Missions</h3></th>
+      <th colspan="4" scope="col" class="text-center"><h3>Missions</h3></th>
+      <th colspan="2" scope="col" class="text-right"><!---<form  action="../resources/php/avg_class_rating.php" method="post">-->
+      <?php $buttonhtml = '<input id="avgbtn" type="button" data-toggle="modal" data-target="#expandModal" class="btn btn-info" action="submit" value="Expand"/>';
+            if ($_SESSION['access']=="villain") {echo $buttonhtml;} ?>
+    </th>
     </tr>
+    <tr>
     <tr>
       <th scope="col">Type</th>
       <th scope="col">Boss</th>
-      <th scope="col">Target</th>
+      <?php $target_col ?>
       <th scope="col">Description</th>
       <th colspan="2" scope="col"></th>
     </tr>
   </thead>
-  <tbody>
-    <?php include "../resources/php/mission_display.php"; ?>
+</tbody>
+
+    <?php
+    	if(isset($_POST['target']) && $_POST['target'] == 'Yes')
+        {
+            echo "target checked";
+        }
+    $values_checked="";
+    include "../resources/php/mission_display.php"; ?>
   </tbody>
 </table>
 </div>
+
+<div class="modal fade" id="expandModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title" id="exampleModalLabel">Show more columns:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"><i class="fa fa-times" style="color:white" aria-hidden="true"></i>
+          </span>
+        </button>
+      </div>
+      <form action="../resources/php/checkbox-form.php" method="post">
+      <div class="modal-body bg-secondary">
+      <br>
+      <div class="container">
+          <div class="form-row">
+            <div class="form-check form-check-inline">
+              <input type="checkbox" name="checkedvals[]" value="target" id="target" class="form-check-input ml-2">
+              <label class="form-check-label" for="target">Target</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input type="checkbox" name="checkedvals[]" value="description" id="description" class="form-check-input ml-2">
+              <label class="form-check-label" for="description">Description</label>
+            </div>
+          </div>
+        
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" name="formSubmit" class="btn btn-primary" value="Submit">Show</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
