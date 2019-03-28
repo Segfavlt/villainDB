@@ -8,15 +8,12 @@ apache2 httpd, php7.2+ and mysql server 5.7+
 
 ## Requirements
 
-1. Update the ServerName in villaindb.conf appropriately, add corresponding
-   dns enty to /etc/hosts if testing locally
-2. villaindb.conf must be placed in /etc/apache2/sites-enabled.conf
-3. appropriate services must be running.
-4. the .sql scripts must be run using a user with the GRANT OPTION privilege
-
+1. Apache2, php, mysql must be configured
 
 ## Setup
 
 1. Ensure requirements are met.
-2. Run sql scripts against instance
-3. extract contents of html/ to /var/www/html
+2. appropriate services must be running.
+3. Run sql scripts against instance
+4. the .sql scripts must be run using a user with the GRANT OPTION privilege
+5. extract contents of html/ to /var/www/html
