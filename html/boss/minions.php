@@ -4,7 +4,7 @@ include "../resources/php/session.php";
 
 <html lang="en">
 <head>
-  <title>Boss Panel - Minions</title>
+  <title>Minions Dashboard</title>
 </head>
 
 <body class="bg-secondary text-light">
