@@ -4,11 +4,11 @@ Example:
 SELECT Field_01
 FROM Table_01
 
-  * Shown on site page:
-  * Query Used in Project:
-  * Used in php file:
-  * On line number:
-  * Users restriction:
+  * Shown on site page: missions
+  * Query Used in Project: "select mission.name, boss.name as bname $target_var $description_var from mission left join mission_description on mission.target=mission_description.target left join boss on mission.boss=boss.id order by mission.name"
+  * Used in php file: mission_display.php
+  * On line number: 14
+  * Users restriction: villain only
 
 
 2. [1 Mark] Selection query : Create one query of this category and provide an interface
