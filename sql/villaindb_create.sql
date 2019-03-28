@@ -123,21 +123,21 @@ create table if not exists minion(
 
 create table if not exists muscle(
   id Integer Primary Key,
-  att_power Integer not null,
+  ability_rating Integer not null,
   weapon varchar(20),
   Foreign Key(id) references minion(id)
 ) engine=innodb;
 
 create table if not exists spy(
   id Integer Primary Key,
-  subterfuge Integer not null,
+  ability_rating Integer not null,
   gadget varchar(20),
   Foreign Key(id) references minion(id)
 ) engine=innodb;
 
 create table if not exists tech(
   id Integer Primary Key,
-  repair_rating Integer not null,
+  ability_rating Integer not null,
   tool varchar(20),
   Foreign Key(id) references minion(id)
 ) engine=innodb;
