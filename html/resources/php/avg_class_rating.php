@@ -7,7 +7,7 @@ $conn = new mysqli($db_host, $db_user, $db_pass, $db);
 if($conn ->connect_errno) {
   echo 'Could not connect: ' . $conn->connect_error;
 }
-$query = "select minion.class, avg(result.ability_rating) as average_ability from minion, (select id, ability_rating from spy union select id, ability_rating from tech union select id, ability_rating from muscle) as result where minion.id=result.id group by minion.class order by class ASC";
+$query = "select advanced.class, avg(result.ability_rating) as average_ability from minion, advanced, (select id, ability_rating from spy union select id, ability_rating from tech union select id, ability_rating from muscle) as result where minion.id=result.id and minion.class=advanced.rank group by minion.class";
 $avg_perf = null;
 try{
     $conn->begin_transaction(MYSQLI_TRANS_START_READ_ONLY);
@@ -18,7 +18,7 @@ try{
     $ansString = "";
     while ($row = $avg_perf->fetch_assoc()) {
       $ansString .= "<tr>";
-      $ansString .= "<td>".$row['class']."</td>";
+      $ansString .= "<td>".ucfirst($row['class'])."</td>";
       $ansString .= "<td>".$row['average_ability']."</td>";
       $ansString .= "</tr>";
 
