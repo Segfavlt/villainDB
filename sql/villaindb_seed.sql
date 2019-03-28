@@ -1016,7 +1016,7 @@ insert into mission values(
 
 insert into mission values(
   'Assassination',
-  10000^,
+  100006,
   'Rebecca Guerra'
 );
 
