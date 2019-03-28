@@ -18,32 +18,27 @@
 // both are unchecked
   if(!IsChecked('checkedvals','target') && !IsChecked('checkedvals','description'))
 {
-    header("location: ../../boss/missions.php");
+    header("location: ../../boss/missions.php?showvals=none");
 }
 
 // only target
 if(IsChecked('checkedvals','target') && !IsChecked('checkedvals','description'))
 {
-    header("location: ../../boss/missions.php");
+    header("location: ../../boss/missions.php?showvals=target");
 }
 
 
 // only description
 if(!IsChecked('checkedvals','target') && IsChecked('checkedvals','description'))
 {
-    header("location: ../../boss/missions.php");
+    header("location: ../../boss/missions.php?showvals=description");
 }
 
 // both are checked
 if(IsChecked('checkedvals','target') && IsChecked('checkedvals','description'))
 {
-    header("location: ../../boss/missions.php");
+    header("location: ../../boss/missions.php?showvals=both");
 }
-
-//or use in a calculation ...
-
-//$price += IsChecked('formDoor','A') ? 10 : 0;
-//$price += IsChecked('formDoor','B') ? 20 : 0;
 
   function IsChecked($chkname,$value)
     {
