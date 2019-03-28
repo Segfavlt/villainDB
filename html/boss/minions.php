@@ -32,8 +32,8 @@ if (isset($_SESSION['message'])): ?>
     <tr>
       <th colspan="3" scope="col" class="text-right"><h3>Minions</h3></th>
       <th colspan="2" scope="col" class="text-right"><!---<form  action="../resources/php/avg_class_rating.php" method="post">-->
-      <?php $buttonhtml = '<input id="avgbtn" type="button" data-toggle="modal" data-target="\#avgModal" class="btn btn-info" action="submit" value="Class Average"/>';
-            if ($_SESSION['access']=="villain") {echo "$buttonhtml";} ?>
+      <?php $buttonhtml = '<input id="avgbtn" type="button" data-toggle="modal" data-target="#avgModal" class="btn btn-info" action="submit" value="Class Average"/>';
+            if ($_SESSION['access']=="villain") {echo $buttonhtml;} ?>
     </th>
     </tr>
     <tr>
