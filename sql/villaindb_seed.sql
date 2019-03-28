@@ -745,6 +745,12 @@ insert into tech values(
 ########
 
 insert into boss(id, base, effectiveness, name) values(
+  100000,
+  1,
+  1000,
+  'Supreme Lord'
+);
+insert into boss(id, base, effectiveness, name) values(
   100001,
   1,
   5,
