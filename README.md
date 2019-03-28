@@ -9,6 +9,8 @@ apache2 httpd, php7.2+ and mysql server 5.7+
 ## Requirements
 
 1. Apache2, php, mysql must be configured
+2. mysql innodb_version must be > 5.6.5 
+Please note: if xampp is used to test this project the bundled mysql does not meet above innodb requirement and will show an error processing transactions. This should not affect funcionality of the project.
 
 ## Setup
 
