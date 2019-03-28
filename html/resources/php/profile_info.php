@@ -24,6 +24,7 @@ switch($_SESSION['access']) {
       $mysql->rollback();}
     break;
   case 'boss':
+  case 'villain':
     try {
       $mysql->begin_transaction(MYSQLI_TRANS_START_READ_ONLY);
       $basic_info = boss_pop($mysql);

@@ -3,16 +3,20 @@ include "resources/php/session.php";
 include"resources/php/profile_info.php";
 
 
-if ($_SESSION['access'] == 'minion') {
-  $rating = $basic_info['grade'];
-  $metric = 'Grade';
-  $extra = $class;
-  $extra_label = "Class";
-} else if ($_SESSION['access'] == 'boss') {
-  $rating = $basic_info['effectiveness'];
-  $metric = 'Effectiveness';
-  $extra = $basic_info['name'];
-  $extra_label = "Name";
+switch ($_SESSION['access']){
+  case 'minion':
+    $rating = $basic_info['grade'];
+    $metric = 'Grade';
+    $extra = $class;
+    $extra_label = "Class";
+    break;
+  case 'boss':
+  case 'villain':
+    $rating = $basic_info['effectiveness'];
+    $metric = 'Effectiveness';
+    $extra = $basic_info['name'];
+    $extra_label = "Name";
+    break;
 }
 
 switch ($class) {
