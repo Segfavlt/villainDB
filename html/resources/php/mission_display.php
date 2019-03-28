@@ -3,12 +3,18 @@ include 'connect.php';
 
 $ident = $_SESSION['user'];
 
+
+$target_var=", mission.target";
+$description_var=", mission_description.description";
+$target_col='<th scope="col">Target</th>';
+$description_col='';
+
 switch ($_SESSION['access']) {
   case 'villain':
-    $mquery = "select mission.name, boss.name as bname, mission.target, mission_description.description from mission left join mission_description on mission.target=mission_description.target left join boss on mission.boss=boss.id order by mission.name";
+    $mquery = "select mission.name, boss.name as bname $target_var $description_var from mission left join mission_description on mission.target=mission_description.target left join boss on mission.boss=boss.id order by mission.name";
     break;
   case 'boss':
-    $mquery = "select mission.name, boss.name as bname, mission.target, mission_description.description from mission left join mission_description on mission.target=mission_description.target left join boss on mission.boss=boss.id where boss.id='$ident' order by mission.name";
+    $mquery = "select mission.name, boss.name as bname $target_var $description_var from mission left join mission_description on mission.target=mission_description.target left join boss on mission.boss=boss.id where boss.id='$ident' order by mission.name";
     break;
 }
 
@@ -21,8 +27,12 @@ try {
   $conn->commit();
   $conn->close();
 
-while ($row = $result->fetch_assoc()):
+?>
 
+
+
+<?php
+  while ($row = $result->fetch_assoc()):
 ?>
 
 <tr>
@@ -31,7 +41,6 @@ while ($row = $result->fetch_assoc()):
   <td> <?php echo ucfirst($row['target']); ?> </td>
   <td> <?php echo ucfirst($row['description']); ?> </td>
 </tr>
-
 
 <?php endwhile;
 } catch (exception $e) {
