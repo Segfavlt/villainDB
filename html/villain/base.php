@@ -1,7 +1,3 @@
-<?php
-include "../resources/php/session.php";
-?>
-
 <html lang="en">
 <head>
   <title>Villain Panel - Bases</title>

@@ -1,7 +1,21 @@
-<?php
-include "resources/php/session.php";
-include"resources/php/profile_info.php";
+<html lang="en">
+<head>
+  <title>Profile</title>
+  <style>
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+      background-color: #dc3545 !important;
+      border-color: #dc3545 !important;
+      color: #fff !important;
+      }
+    .nav-link {
+      color: #999 !important;
+    }
+  </style>
+</head>
+<?php include "resources/php/nav.php" ?>
 
+<?php
+include"resources/php/profile_info.php";
 
 switch ($_SESSION['access']){
   case 'minion':
@@ -39,23 +53,9 @@ switch ($class) {
 
 ?>
 
-<html>
 
-<head>
-  <title>Profile</title>
-  <style>
-    .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
-      background-color: #dc3545 !important;
-      border-color: #dc3545 !important;
-      color: #fff !important;
-      }
-    .nav-link {
-      color: #999 !important;
-    }
-  </style>
 </head>
 
-<?php include "resources/php/nav.php";?>
 <body class="bg-secondary text-light">
     <div class="container">
       <div class="row mt-5">

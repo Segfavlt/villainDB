@@ -1,12 +1,6 @@
-<?php
-include "../resources/php/session.php";
-?>
-
 <html lang="en">
 <head>
   <title>Minions Dashboard</title>
-
-
 </head>
 
 <body class="bg-secondary text-light">

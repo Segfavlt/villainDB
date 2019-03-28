@@ -1,18 +1,17 @@
-<?php
-include "../resources/php/session.php";
+<html lang="en">
+<head>
+  <title>Villain Panel</title>
+</head>
+<?php include "../resources/php/nav.php" ?>
 
+<?php
 if ($_SESSION['access'] != 'villain') {
   header('Location: /success.php');
 }
 ?>
 
-<html lang="en">
-<head>
-  <title>Villain Panel</title>
-</head>
-
 <body class="bg-secondary text-light">
-<?php include "../resources/php/nav.php" ?>
+
 Hello Master
 </body>
 </html>
