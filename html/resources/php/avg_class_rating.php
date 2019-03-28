@@ -15,7 +15,7 @@ try{
     $avg_perf = $conn->query($query);
     $conn->commit();
     $conn->close();
-    $ansString;
+    $ansString = "";
     while ($row = $avg_perf->fetch_assoc()) {
       $ansString .= "<tr>";
       $ansString .= "<td>".$row['class']."</td>";
