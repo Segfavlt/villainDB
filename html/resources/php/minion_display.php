@@ -1,8 +1,9 @@
 <?php
+include ("session.php");
 include ("connect.php");
 $user = $_SESSION['user'];
-$conn = new mysqli($db_host, $db_user, $db_pass, $db);
-if($conn ->connect_errno) {
+$mysql = new mysqli($db_host, $db_user, $db_pass, $db);
+if($mysql ->connect_errno) {
     echo 'Could not connect: ' . $mysql->connect_error;
 }
 switch($_SESSION['access']) {
@@ -18,7 +19,7 @@ switch($_SESSION['access']) {
 try {
   $conn->begin_transaction(MYSQLI_TRANS_START_READ_ONLY);
 
-  $result = $conn->query($query);
+  $result = $conn->query($mquery);
   $conn->commit();
   $conn->close();
 
