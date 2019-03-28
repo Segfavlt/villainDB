@@ -9,12 +9,19 @@ if($mysql ->connect_errno) {
 switch($_SESSION['access']) {
   case 'villain':
     $query = "select minion.id, minion.grade, minion.base, advanced.class from minion left join advanced on minion.class=advanced.rank order by id";
+    $avg_perf_query = "select minion.class, avg(result.ability_rating) from minion, (select id, ability_rating from spy union select id, ability_rating from tech union select id, ability_rating from muscle) as result where minion.id=result.id group by minion.class order by class ASC";
     break;
   case 'boss':
     $query = "select minion.id, minion.grade, minion.base, advanced.class from minion left join advanced on minion.class=advanced.rank where minion.base in (select base from boss where id='$user') order by id";
     break;
 }
-$result = $mysql -> query($query);
+
+try {
+  $conn->begin_transaction(MYSQLI_TRANS_START_READ_ONLY);
+
+  $result = $conn->query($mquery);
+  $conn->commit();
+  $conn->close();
 
 while ($row = $result->fetch_assoc()):
 ?>
@@ -31,4 +38,9 @@ while ($row = $result->fetch_assoc()):
 </tr>
 
 
-<?php endwhile; ?>
+<?php endwhile; 
+} catch (exception $e) {
+  $conn->rollback();
+  $conn->close();
+}
+?>
