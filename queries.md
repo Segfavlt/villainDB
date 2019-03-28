@@ -17,11 +17,11 @@ SELECT Field_01
 FROM Table_01
 WHERE Field_02 >= 0
 
-  * Shown on site page:
-  * Query Used in Project:
-  * Used in php file:
-  * On line number:
-  * Users restriction:
+  * Shown on site page: Minion
+  * Query Used in Project: select id from minion where grade="$grade";
+  * Used in php file: filter_grade.php
+  * On line number: 14
+  * Users restriction: boss, villain
 
 
 3. [1 Mark] Join query: Pick one query of this category, which joins at least two tables and
