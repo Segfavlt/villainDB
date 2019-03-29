@@ -116,7 +116,8 @@ create table if not exists minion(
   grade ENUM('D', 'C', 'B', 'A', 'S') not null,
   base Integer not null,
   class enum('0','1','2','3') not null,
-  Foreign Key(id) references users(id),
+  Foreign Key(id) references users(id)
+    on delete cascade,
   Foreign Key(base) references base(id),
   Foreign Key (class) references advanced(rank)
 ) engine=innodb;
@@ -126,6 +127,7 @@ create table if not exists muscle(
   ability_rating Integer not null,
   weapon varchar(20),
   Foreign Key(id) references minion(id)
+    on delete cascade
 ) engine=innodb;
 
 create table if not exists spy(
@@ -133,6 +135,7 @@ create table if not exists spy(
   ability_rating Integer not null,
   gadget varchar(20),
   Foreign Key(id) references minion(id)
+    on delete cascade
 ) engine=innodb;
 
 create table if not exists tech(
@@ -140,6 +143,7 @@ create table if not exists tech(
   ability_rating Integer not null,
   tool varchar(20),
   Foreign Key(id) references minion(id)
+    on delete cascade
 ) engine=innodb;
 
 

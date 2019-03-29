@@ -24,7 +24,7 @@ try {
 while ($row = $result->fetch_assoc()):
 ?>
 
-  <th colspan="1"> <?php echo $row['count']; ?> </th>
+  <th colspan="1"> Total Minions: <?php echo $row['count']; ?> </th>
 
 
 <?php endwhile;

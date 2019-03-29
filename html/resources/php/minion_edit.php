@@ -10,7 +10,7 @@ if($mysql ->connect_errno) {
 // check if delete is pressed and process it
 if (isset($_GET['delete'])){
   $id = $_GET['delete'];
-  $query = "delete from minion where id=$id";
+  $query = "delete from users where id=$id";
 
   if (!mysqli_query($mysql, $query))
   {
