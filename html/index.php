@@ -21,56 +21,44 @@ if (isset($_SESSION['authenticated']) && $_SESSION['authenticated']) {
 </head>
 
 <body class="bg-secondary text-light">
-<div class="container">
-    <div class="row m-4">
+<div class="modal-dialog">
+	<div class="modal-content bg-dark">
+		<div class="modal-heading">
+            <img
+                src="resources/svg/villainDB.svg" alt="villainDB" class="img-fluid ml-4 mt-5" alt="Responsive image"
+            />
+		</div>
+		<hr />
+		<div class="modal-body">
+			<form action="resources/php/login_request.php" role="form" method="post">
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+						<span class="glyphicon glyphicon-user"></span>
+						</span>
+						<input type="text" class="form-control" placeholder="Username" name="user"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="input-group">
+						<span class="input-group-addon">
+						<span class="glyphicon glyphicon-lock"></span>
+						</span>
+						<input type="password" class="form-control" placeholder="Password" name="pwd"/>
+					</div>
+				</div>
+                    <?php
+                        if (isset($_SESSION['loginerror'])) {
+                        echo "<span class='text-warning'> Failed to authenticate username or password</span>";
+                    }
+                    ?>
+				<div class="form-group text-center">
+					<button type="submit" class="btn btn-success btn-lg mt-5">Login</button>
+				</div>
 
-        <div class="col">
-        </div>
-
-        <div class="col-4 bg-dark">
-            <div class="p-3 shadow rounded">
-                <div class="pt-3">
-                    <img
-                        src="resources/svg/villainDB.svg" alt="villainDB" height="46px"
-                        width="187px"
-                    />
-                </div>
-
-                <form class="mt-5" action="resources/php/login_request.php"
-                  method="post">
-                    <div class="form-group">
-                        <input type="text"
-                            class="form-control form-control-sm"
-                            placeholder="Username"  name="user">
-                    </div>
-
-                    <div class="form-group">
-                        <input type="password"
-                            class="form-control form-control-sm"
-                            placeholder="Password"  name="pwd">
-                    </div>
-
-<?php
-
-  if (isset($_SESSION['loginerror'])) {
-    echo "<span class='text-warning'> Failed to authenticate username or password</span>";
-  }
-?>
-
-                    <div class="mt-5">
-                        <button class="btn btn-sm btn-danger col"
-                        type="submit">
-                            Login
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="col">
-        </div>
-
-    </div>
+			</form>
+		</div>
+	</div>
 </div>
 </body>
 

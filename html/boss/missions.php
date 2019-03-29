@@ -20,21 +20,6 @@ if (isset($_SESSION['message'])): ?>
 </div>
 <?php endif // alert ends here
 ?>
-
-<table class="table table-dark">
-  <thead>
-    <tr>
-      <th colspan="1" scope="col" class="text-left">
-      <?php $buttonhtml = '<input id="divbtn" type="button" data-toggle="modal" data-target="#divModal" class="btn btn-info" action="submit" value="Bosses with all Types"/>';
-            if ($_SESSION['access']=="villain") {echo $buttonhtml;} ?>
-      </th>
-      <th colspan="2" scope="col" class="text-left"><h3>Missions</h3></th>
-      <th colspan="1" scope="col" class="text-right">
-      <?php $buttonhtml = '<input id="avgbtn" type="button" data-toggle="modal" data-target="#expandModal" class="btn btn-info" action="submit" value="Expand"/>';
-            if ($_SESSION['access']=="villain") {echo $buttonhtml;} ?>
-    </th>
-    </tr>
-    <tr>
     <?php
     $include_var="../resources/php/mission_display.php";
     // projection check // which columns should be shown

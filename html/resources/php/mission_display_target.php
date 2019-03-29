@@ -29,7 +29,33 @@ try {
 
 ?>
 
+<table class="table bg-secondary table-borderless mb-0">
+  <thead>
+    <tr class="bg-secondary text-light">
+      <th colspan="2" scope="col" class="text-center">
+        <?php 
+          $buttonhtml = '<input id="divbtn" type="button" data-toggle="modal" data-target="#divModal" class="btn btn-info float-left" action="submit" value="Bosses with all Types"/>';
+          if ($_SESSION['access']=="villain") {
+          echo $buttonhtml;
+          } 
+        ?>
+        <?php 
+          $buttonhtml = '<input id="avgbtn" type="button" data-toggle="modal" data-target="#expandModal" class="btn btn-info float-right" action="submit" value="Expand"/>';
+          if ($_SESSION['access']=="villain") {
+            echo $buttonhtml;
+          } 
+        ?>
+      </th>
+    </tr>
+</table>
+<table class="table table-dark">
+  <thead>
 <tr>
+  <th colspan="2" scope="col" class="text-center">
+    <h3>Missions</h3>
+  </th>
+</tr>
+</tr>
       <th scope="col">Type</th>
       <th scope="col">Boss</th>
       <th scope="col">Target</th>
@@ -41,7 +67,7 @@ try {
 ?>
 
 <tr>
-  <th scope="row"> <?php echo ucfirst($row['name']); ?> </th>
+  <td scope="row"> <?php echo ucfirst($row['name']); ?> </td>
   <td> <?php echo $row['bname']; ?> </td>
   <td> <?php echo ucfirst($row['target']); ?> </td>
 </tr>
