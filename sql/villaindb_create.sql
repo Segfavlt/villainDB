@@ -57,7 +57,8 @@ create table if not exists boss(
   base Integer not null,
   effectiveness Integer not null,
   name varchar(20) not null,
-  Foreign Key(id) references users(id),
+  Foreign Key(id) references users(id)
+    on delete cascade,
   Foreign Key(base) references base(id)
 ) engine=innodb;
 
@@ -79,6 +80,7 @@ create table if not exists mission(
   Primary Key(name, target, boss),
   Index summary (name, target),
   Foreign Key(boss) references boss(id)
+	on delete cascade
 ) engine=innodb;
 
 create table if not exists mission_description(
@@ -88,6 +90,7 @@ create table if not exists mission_description(
   description varchar(300) not null,
   Primary Key(name, target),
   Foreign Key(name, target) references mission(name, target)
+    on delete cascade
 ) engine=innodb;
 
 create table if not exists hero(
