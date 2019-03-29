@@ -24,14 +24,18 @@ if (isset($_SESSION['message'])): ?>
 <table class="table table-dark">
   <thead>
     <tr>
-      <th colspan="4" scope="col" class="text-center"><h3>Missions</h3></th>
-      <th colspan="2" scope="col" class="text-right"><!---<form  action="../resources/php/avg_class_rating.php" method="post">-->
+      <th colspan="1" scope="col" class="text-left">
+      <?php $buttonhtml = '<input id="divbtn" type="button" data-toggle="modal" data-target="#divModal" class="btn btn-info" action="submit" value="Bosses with all Types"/>';
+            if ($_SESSION['access']=="villain") {echo $buttonhtml;} ?>
+      </th>
+      <th colspan="2" scope="col" class="text-left"><h3>Missions</h3></th>
+      <th colspan="1" scope="col" class="text-right">
       <?php $buttonhtml = '<input id="avgbtn" type="button" data-toggle="modal" data-target="#expandModal" class="btn btn-info" action="submit" value="Expand"/>';
             if ($_SESSION['access']=="villain") {echo $buttonhtml;} ?>
     </th>
     </tr>
     <tr>
-    <?php 
+    <?php
     $include_var="../resources/php/mission_display.php";
     // projection check // which columns should be shown
       if (isset($_GET['showvals'])) {
@@ -60,6 +64,32 @@ if (isset($_SESSION['message'])): ?>
 </table>
 </div>
 
+<div class="modal fade" tabindex="-1" role="dialog" id="divModal" aria-labelledby="divModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title">Average Ability per Class</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         <span aria-hidden="true"><i class="fa fa-times" style="color:white" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <table class="table table-striped table-dark">
+        <thead>
+        <tr><th>ID</th><th>Name</th></tr>
+        <tbody id="ajaxDiv">
+        </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+
+</div>
+</div>
+
 <div class="modal fade" id="expandModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content bg-dark">
@@ -84,7 +114,7 @@ if (isset($_SESSION['message'])): ?>
               <label class="form-check-label" for="description">Description</label>
             </div>
           </div>
-        
+
       </div>
       </div>
       <div class="modal-footer">
@@ -97,4 +127,15 @@ if (isset($_SESSION['message'])): ?>
 </div>
 
 </body>
+  <script>
+      $("#divbtn").click(function () {
+        $.post("../resources/php/boss_mission_div.php",
+          function(response){
+            $("#ajaxDiv").html(response);
+            $("#divModal").modal('show');
+            console.log(response);
+          }
+        );
+    });
+  </script>
 </html>
