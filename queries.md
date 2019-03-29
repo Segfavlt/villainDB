@@ -6,7 +6,7 @@ FROM Table_01
 
   * Shown on site page: missions
   * Query Used in Project: "select mission.name, boss.name as bname $target_var $description_var from mission left join mission_description on mission.target=mission_description.target left join boss on mission.boss=boss.id order by mission.name"
-  * Used in php file: mission_display.php
+  * Used in php file: resources/php/mission_display.php
   * On line number: 14
   * Users restriction: villain only
 
@@ -19,7 +19,7 @@ WHERE Field_02 >= 0
 
   * Shown on site page: Minion
   * Query Used in Project: select id from minion where grade="$grade";
-  * Used in php file: filter_grade.php
+  * Used in php file: resources/php/filter_grade.php
   * On line number: 14
   * Users restriction: boss, villain
 
@@ -31,7 +31,7 @@ customers who has purchased a specific item).
 
   * Shown on site page: missions
   * Query Used in Project: "select mission.name, boss.name as bname $target_var $description_var from mission left join mission_description on mission.target=mission_description.target left join boss on mission.boss=boss.id order by mission.name"
-  * Used in php file: mission_display.php
+  * Used in php file: resources/php/mission_display.php
   * On line number: 14
   * Users restriction: villain only
 
@@ -39,11 +39,11 @@ customers who has purchased a specific item).
 4. [2 Mark] Division query: Pick one query of this category and provide an interface for
 the user to choose this query (e.g. find all the customers who bought all the items).
 
-  * Shown on site page:
+  * Shown on site page: mission.php
   * Query Used in Project: "select name, id from boss b where not exists (select m.name, m.boss from mission m
     where not exists (select boss from mission m2 where b.id=m2.boss and m.name=m2.name))"
-  * Used in php file:
-  * On line number:
+  * Used in php file: resources/php/boss_mission_div.php
+  * On line number: 
   * Users restriction: villain
 
 
@@ -52,14 +52,14 @@ aggregation (min, max, average, or count are all fine).
 
   * Shown on site page: minions.php
   * Query Used in Project: "select count(\*) as count from minions"
-  * Used in php file: minion_count.php
+  * Used in php file: resources/php/minion_count.php
   * On line number: 9
   * Users restriction: villain,boss
 
   * Shown on site page: boss.php
   * Query Used in Project: "select average(\*) as avg from boss where id <>
     $ident"
-  * Used in php file: avg_boss_rating.php
+  * Used in php file: resources/php/avg_boss_rating.php
   * On line number: 9
   * Users restriction: villain
 
@@ -69,7 +69,7 @@ customer).
 
   * Shown on site page: Minions page using "Class Average" button
   * Query Used in Project: "select advanced.class, avg(result.ability_rating) as average_ability from minion, advanced, (select id, ability_rating from spy union select id, ability_rating from tech union select id, ability_rating from muscle) as result where minion.id=result.id and minion.class=advanced.rank group by minion.class"
-  * Used in php file: avg_class_rating.php
+  * Used in php file: resources/php/avg_class_rating.php
   * On line number: 10
   * Users restriction: villain only
 
@@ -80,7 +80,7 @@ deletion should be performed.
 
   * Shown on site page: Bases click on red trash can beside each row
   * Query Used in Project: "delete from base where id='$id'"
-  * Used in php file: base_edit.php
+  * Used in php file: resources/php/base_edit.php
   * On line number: 39
   * Users restriction: villain only
 
@@ -90,7 +90,7 @@ for the update operation.
 
   * Shown on site page: profile.php
   * Query Used in Project: "update users set passwd='$hash' where id='$id'";
-  * Used in php file: update_pass.php
+  * Used in php file: resources/php/update_pass.php
   * On line number: 24
   * Users restriction: none
 
@@ -99,8 +99,6 @@ for the update operation.
 supports. Some examples are using Bootstrap, implementing Triggers and Privileges in
 the database.
 
-  * Shown on site page:
-  * Query Used in Project:
-  * Used in php file:
-  * On line number:
-  * Users restriction:
+  * Triggers in villaindb.create.sql
+  * Different levels of user privilege: villain, boss and minions
+  * Used bootstrap for UI
