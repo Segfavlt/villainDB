@@ -40,10 +40,11 @@ customers who has purchased a specific item).
 the user to choose this query (e.g. find all the customers who bought all the items).
 
   * Shown on site page:
-  * Query Used in Project:
+  * Query Used in Project: "select name, id from boss b where not exists (select m.name, m.boss from mission m
+    where not exists (select boss from mission m2 where b.id=m2.boss and m.name=m2.name))"
   * Used in php file:
   * On line number:
-  * Users restriction:
+  * Users restriction: villain
 
 
 5. [2 Mark] Aggregation query: Pick two queries that require the use of distinct
